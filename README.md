@@ -4,7 +4,7 @@
 
 ## 任务评估结构图
 
-<img src="figs/tasks.png"  width="60%" height="60%"></img>
+<img src="https://github.com/Dai-shen/scuCLUE/blob/main/resources/tasks.png"  width="60%" height="60%"></img>
 
 `这个表做成一个图`
 
