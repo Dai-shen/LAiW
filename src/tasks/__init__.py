@@ -19,6 +19,9 @@ TASK_REGISTRY = {
     "flare_australian": flare.Australian,
     "flare_ectsum": flare.ECTSUM,
     "flare_edtsum": flare.EDTSUM,
+    "data_gene_real_german": flare.REALGERMAN,
+    "data_gene_syn_german": flare.SYNGERMAN,
+    "data_german": flare.testgerman,
     "legal_ar": flare.AR,
     **flare.SM_TASKS,
 }
