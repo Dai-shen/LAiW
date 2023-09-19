@@ -55,6 +55,8 @@
 | -  |    LawGPT    | Chinese-LLaMA-7b  |          Personal Team           | - | - | - | - | - | - | - | - | - | - | - |
 | -  | Lawyer LLaMA | Chinese-LLaMA-13B | Personal(Peking University team) | - | - | - | - | - | - | - | - | - | - | - |
 | -  |   LexiLaw    |    ChatGLM-6B     |   Personal(Tsinghua IR Group)    | - | - | - | - | - | - | - | - | - | - | - |
+| -  | fuzi.mingcha |   ChatGLM-6B      |  SDU, CPUL, e.t.  | - | - | - | - | - | - | - | - | - | - | - |
+| -  | HanFei  | HanFei | UCAS (SIAT-NLP) | - | - | - | - | - | - | - | - | - | - | - |
 
 ### 评测
 
