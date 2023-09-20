@@ -6,59 +6,9 @@
 
 <img src="https://github.com/Dai-shen/SCULaiw/blob/main/resources/task_framwork.png"  width="50%" height="50%"></img>
 
-### 总榜单
-
-|  排名  | 模型 | 模型类别 | 机构 | 总分 | 语言理解能力 | 法律应用能力 |
-|:----:| :----:| :----: | :----:| :----: | :----: | :----: |
-|  -   | gpt4 | 通用 | OpenAI | - | - | - |
-| -    | gpt-3.5-turbo | 通用 | OpenAI | - | - | - |
-|  -   | ChatLaw | 法律 | Peking University | - | - | - |
-|  -   | Zhihai-Luwen | 法律 | ZJU, Alibaba, e.t. | - | - | - |
-|  -   | LaWGPT | 法律 | Personal Team | - | - | - |
-|  -   | Lawyer LLaMA | 法律 | Peking University team | - | - | - |
-|  -   | LexiLaw | 法律 | Tsinghua IR Group | - | - | - |
-| -  |  fuzi.mingcha | 法律 | SDU, CUPL, e.t.| -  | - | - |
-|  -   | internlm-chat | 通用 | InternLM Team | - | - | - |
-|  -   | baichuan | 通用 | Baichuan Inc. | - | - | - |
-|  -   | chatglm | 通用 | Tsinghua & Zhipu | - | - | - |
-|  -   | llama | 通用 | Meta AI | - | - | - |
-|  -   | llama-2-chat | 通用 | Meta AI | - | - | - |
-|  -   | Ziya-llama | 通用 | IDEA-CCNL | - | - | - |
-|  -   | Chinese-llama | 通用 | Yiming Cui | - | - | - |
-
-
-
-### 通用大模型榜单
-
-| 排名 |         模型         |    基模型    |        机构        | 总分 | 信息抽取 | 要素识别 | 文本摘要 | 法律文书生成 | 法律知识问答 | 案情分析 | 类案匹配 | 法律判决预测 | 诉请判决预测 | 争议焦点挖掘 |
-|:----:|:------------------:|:---------:|:----------------:| :----: | :----: | :----: | :----:| :----: | :----: | :----: | :----:| :----: | :----: |:-----:|
-| - |        gpt4        |     -     |      OpenAI      | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |   gpt-3.5-turbo    |     -     |      OpenAI      | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |  internlm-chat-7b  |     -     |  InternLM Team   | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |    baichuan-7B     |     -     |  Baichuan Inc.   | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |     chatglm-6b     |     -     | Tsinghua & Zhipu | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |    chatglm2-6b     |     -     | Tsinghua & Zhipu | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |      llama-7b      |     -     |     Meta AI      | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |     llama-13b      |     -     |     Meta AI      | - | - | - | - | - | - | - | - | - | - |   -    |
-| - | llama-2-7b-chat-hf |     -     |     Meta AI      | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |   Ziya-LLaMA-13B   | llama-13b |    IDEA-CCNL     | - | - | - | - | - | - | - | - | - | - |   -    |
-| - |  Chinese-llama-7b  | llama-7b  |    Yiming Cui    | - | - | - | - | - | - | - | - | - | - |   -    |
-| - | Chinese-llama-13b  | llama-13b |    Yiming Cui    | - | - | - | - | - | - | - | - | - | - |   -    |
-
-### 中文法律大模型榜单
-
-| 排名 |      模型      |        基模型        |                机构                | 总分 | 信息抽取 | 要素识别 | 文本摘要 | 法律文书生成 | 法律知识问答 | 案情分析 | 类案匹配 | 法律判决预测 | 诉请判决预测 | 争议焦点挖掘 |
-|:--:|:------------:|:-----------------:|:--------------------------------:| :----: | :----: | :----: | :----:| :----: | :----: | :----: | :----:| :----: | :----: | :----: |
-| -  |   ChatLaw    |  Ziya-LLaMA-13B   |        Peking University         | - | - | - | - | - | - | - | - | - | - | - |
-| -  |    智海-录问     |    Baichuan-7B    |         ZJU,Alibaba,e.t.         | - | - | - | - | - | - | - | - | - | - | - |
-| -  |  LawGPT-zh   |    ChatGLM-6B     |          Personal Team           | - | - | - | - | - | - | - | - | - | - | - |
-| -  |    LawGPT    | Chinese-LLaMA-7b  |          Personal Team           | - | - | - | - | - | - | - | - | - | - | - |
-| -  | Lawyer LLaMA | Chinese-LLaMA-13B | Personal(Peking University team) | - | - | - | - | - | - | - | - | - | - | - |
-| -  |   LexiLaw    |    ChatGLM-6B     |   Personal(Tsinghua IR Group)    | - | - | - | - | - | - | - | - | - | - | - |
-| -  | fuzi.mingcha |   ChatGLM-6B      |  SDU, CPUL, e.t.  | - | - | - | - | - | - | - | - | - | - | - |
-| -  | HanFei  | HanFei | UCAS (SIAT-NLP) | - | - | - | - | - | - | - | - | - | - | - |
-
 ### 评测
+
+我们按照结构图所示的10个基础能力测试任务成功评测了现存诸多大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/SCULaiw)。评测模型不仅包括未开源的 chatgpt 和 gpt，而且还有 llama2, baichuan, chatglm 等开源通用大模型和 Chatlaw, hanfei 等开源的中文法律大模型
 
 #### 环境准备
 
@@ -122,4 +72,7 @@ python eval.py \
 
 | 任务类型 | 评价指标 | 说明                                                  |
 |----|------|-----------------------------------------------------|
-| 分类 | 准确率  | 这个指标表示正确预测的观测结果与总观测结果的比率。它的计算方式是（真正例 + 真负例）/ 总样例个数。 |
+| 分类 | Acc  | 表示正确预测的观测结果与总观测结果的比率 |
+| 分类 | F1 | F1 分数代表精确率和召回率的调和平均值，从而在这两个因素之间建立平衡。事实证明，它在一个因素比另一个因素更重要的情况下特别有用。分数范围从 0 到 1，1 表示完美的精确度和召回率，0 表示最差的情况 |
+| 分类 | Missing | 计算任务中给定候选项中未返回任何选项的样本比例 |
+| 分类 | Mcc | 是一种评估二元分类质量的指标，产生的分数范围为 -1 到 +1。+1 分表示完美预测，0 表示预测不比随机机会好，-1 表示完全相反的预测 |
