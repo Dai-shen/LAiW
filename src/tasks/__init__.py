@@ -19,9 +19,6 @@ TASK_REGISTRY = {
     "legal_australian": legal.Australian,
     "legal_ectsum": legal.ECTSUM,
     "legal_edtsum": legal.EDTSUM,
-    "data_gene_real_german": legal.REALGERMAN,
-    "data_gene_syn_german": legal.SYNGERMAN,
-    "data_german": legal.testgerman,
     "legal_ar": legal.AR,
     **legal.SM_TASKS,
 }

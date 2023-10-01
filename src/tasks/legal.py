@@ -950,21 +950,6 @@ class ConvFinQA(QA):
 
 
 # Add Tasks
-class REALGERMAN(Classification):
-    DATASET_PATH = "/media/data1/daiyf/data_generation/german/real/"
-    CALCULATE_MCC = True
-
-
-class SYNGERMAN(Classification):
-    DATASET_PATH = "/media/data1/daiyf/data_generation/german/synthesis/"
-    CALCULATE_MCC = True
-
-
-class testgerman(Classification):
-    DATASET_PATH = "/home/daiyf/daiyf/CSdataset/german-desc"
-    CALCULATE_MCC = True
-
-
 class AR(Classification):
     DATASET_PATH = "/home/daiyf/daiyf/legaldata/jp-ar"
     CALCULATE_MCC = True
