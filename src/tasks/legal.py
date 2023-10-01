@@ -1,5 +1,5 @@
 """
-FLARE
+LEGAL TASKS
 """
 from lm_eval.base import Task, rf
 from lm_eval.metrics import mean

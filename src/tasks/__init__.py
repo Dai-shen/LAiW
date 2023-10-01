@@ -4,26 +4,26 @@ from typing import List, Union
 import json
 import lm_eval.base
 
-from . import flare
+from . import legal
 
 TASK_REGISTRY = {
-    "flare_fpb": flare.FPB,
-    "flare_fiqasa": flare.FIQASA,
-    "flare_ner": flare.NER,
-    "flare_finqa": flare.FinQA,
-    "flare_convfinqa": flare.ConvFinQA,
-    "flare_headlines": flare.Headlines,
-    "flare_finer_ord": flare.FinerOrd,
-    "flare_fomc": flare.FOMC,
-    "flare_german": flare.German,
-    "flare_australian": flare.Australian,
-    "flare_ectsum": flare.ECTSUM,
-    "flare_edtsum": flare.EDTSUM,
-    "data_gene_real_german": flare.REALGERMAN,
-    "data_gene_syn_german": flare.SYNGERMAN,
-    "data_german": flare.testgerman,
-    "legal_ar": flare.AR,
-    **flare.SM_TASKS,
+    "legal_fpb": legal.FPB,
+    "legal_fiqasa": legal.FIQASA,
+    "legal_ner": legal.NER,
+    "legal_finqa": legal.FinQA,
+    "legal_convfinqa": legal.ConvFinQA,
+    "legal_headlines": legal.Headlines,
+    "legal_finer_ord": legal.FinerOrd,
+    "legal_fomc": legal.FOMC,
+    "legal_german": legal.German,
+    "legal_australian": legal.Australian,
+    "legal_ectsum": legal.ECTSUM,
+    "legal_edtsum": legal.EDTSUM,
+    "data_gene_real_german": legal.REALGERMAN,
+    "data_gene_syn_german": legal.SYNGERMAN,
+    "data_german": legal.testgerman,
+    "legal_ar": legal.AR,
+    **legal.SM_TASKS,
 }
 
 ALL_TASKS = sorted(list(TASK_REGISTRY))
