@@ -951,5 +951,5 @@ class ConvFinQA(QA):
 
 # Add Tasks
 class AR(Classification):
-    DATASET_PATH = "/home/daiyf/daiyf/legaldata/jp-ar"
+    DATASET_PATH = "/media/data1/daiyf/legaldata/AR/"
     CALCULATE_MCC = True
