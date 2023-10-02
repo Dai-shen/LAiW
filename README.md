@@ -1,6 +1,6 @@
-# SCULaiw: Legal Evaluation Framework (BIAN)
+# ⚖️SCULaiw: Legal Evaluation Framework (BIAN)
 
-狴犴：中文法律大模型综合性基准
+**狴犴：中文法律大模型综合性基准**
 
 🔥 [SCULaiw最新榜单](https://huggingface.co/spaces/daishen/SCULaiw)
 
@@ -14,7 +14,7 @@
 
 ## Contents
 
-- [SCULaiw: Legal Evaluation Framework (BIAN)](#sculaiw-legal-evaluation-framework-bian)
+- [⚖️SCULaiw: Legal Evaluation Framework (BIAN)](#️sculaiw-legal-evaluation-framework-bian)
   - [新闻](#新闻)
   - [Contents](#contents)
     - [任务评测结构图](#任务评测结构图)
