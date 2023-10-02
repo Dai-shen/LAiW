@@ -143,7 +143,6 @@ python eval.py \
     <td>原始数据集</td>
     <td>指令微调<br>数据集</td>
     <td>指令微调<br>数据集大小</td>
-    <td>Prompt</td>
   </tr>
 
   <tr>
@@ -152,19 +151,16 @@ python eval.py \
     <td>CAIL-2018</td>
     <td><a href="https://www.example.com">legal_ar</a></td>
     <td>5k</td>
-    <td>请根据下面给定的案件的相关描述预测其涉及的法条，可供选择的法条为('133', '264', '234')，回答只能是这三个法条中的一个。这三个法条代表《中华人民共和国刑法》中的法律条文，其中，法条‘133’表示‘违反交通运输管理法规，因而发生重大事故，致人重伤、死亡或者使公私财产遭受重大损失‘，法条‘264’表示‘盗窃公私财物，或者多次盗窃、入户盗窃、携带凶器盗窃、扒窃’，法条’234’表示’故意伤害他人身体‘。<br>文本:</td>
   </tr>
   <tr>
     <td>要素识别</td>
     <td>CAIL-2019</td>
     <td><a href="https://www.example.com">legal_er</a></td>
     <td>5k</td>
-    <td>请根据以下劳动争议领域的裁判文书的部分句段，识别其涉及的要素，可供选择的要素有('LB1', 'LB2', 'LB3', 'LB4', 'LB5', 'LB6', 'LB7', 'LB8', 'LB9', 'LB10','LB11', 'LB12', 'LB13', 'LB14', 'LB15', 'LB16', 'LB17', 'LB18', 'LB19', 'LB20')，回答只能是这二十个选项中的一个。这二十个选项中，'LB1'表示‘解除劳动关系‘，'LB2'表示‘支付工资‘，'LB3'表示‘支付经济补偿金‘，'LB4'表示‘未支付足额劳动报酬‘，'LB5'表示‘存在劳动关系‘，'LB6'表示‘未签订劳动合同‘，'LB7'表示‘签订劳动合同‘，'LB8'表示‘支付加班工资‘，'LB9'表示‘支付未签订劳动合同二倍工资赔偿‘，'LB10'表示‘支付工伤赔偿‘，'LB11'表示‘劳动仲裁阶段未提起‘，'LB12'表示‘不支付违法解除劳动关系赔偿金‘，'LB13'表示‘经济性裁员‘，'LB14'表示‘不支付奖金‘，'LB15'表示‘违法向劳动者收取财物‘，'LB16'表示‘特殊工种‘，'LB17'表示‘支付工亡补助金|丧葬补助金|抚恤金‘，'LB18'表示‘用人单位提前通知解除‘，'LB19'表示‘法人资格已灭失‘，'LB20'表示‘有调解协议‘。<br>文本：</td>
   </tr>
   <tr>
     <td>命名实体识别</td>
     <td>CAIL-2021</td>
-    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -173,21 +169,18 @@ python eval.py \
     <td>CAIL-2020</td>
     <td></td>
     <td></td>
-    <td></td>
   </tr>
   <tr>
     <td>案件识别</td>
     <td>CJRC</td>
     <td><a href="https://www.example.com">legal_er</a></td>
     <td>10k</td>
-    <td>请根据以下案件的标题或者相关描述文本，判断该案件属于刑事案件还是民事案件，并且你的回答应该只能是其中一个。<br>文本：</td>
   </tr>
 
   <tr>
     <td rowspan="5">法律知识<br>理解能力</td>
     <td>刑事判决预测</td>
-    <td>Criminal-S<br><center>MLMN</center></td>
-    <td></td>
+    <td>Criminal-S<br>MLMN</td>
     <td></td>
     <td></td>
   </tr>
@@ -196,12 +189,10 @@ python eval.py \
     <td>MSJudeg</td>
     <td></td>
     <td></td>
-    <td></td>
   </tr>
   <tr>
     <td>法律问答</td>
     <td>JEC-QA</td>
-    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -210,12 +201,10 @@ python eval.py \
     <td>Undisclosed</td>
     <td></td>
     <td></td>
-    <td></td>
   </tr>
   <tr>
     <td>类案匹配</td>
     <td>CAIL-2019</td>
-    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -226,19 +215,16 @@ python eval.py \
     <td>AC-NLG</td>
     <td></td>
     <td></td>
-    <td></td>
   </tr>
   <tr>
     <td>案情理解</td>
     <td>CJRC</td>
     <td></td>
     <td></td>
-    <td></td>
   </tr>
   <tr>
     <td>法律咨询</td>
     <td>CrimeKgAssitant</td>
-    <td></td>
     <td></td>
     <td></td>
   </tr>
