@@ -63,23 +63,6 @@ python eval.py \
   
 下面是评测任务的具体描述
 
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  table td {
-    padding: 8px;
-    text-align: center;
-    border: 1px solid black;
-  }
-  
-  table td:last-child {
-    text-align: left;
-  }
-</style>
-
 <table>
 
   <tr>
@@ -152,15 +135,7 @@ python eval.py \
 
 这里展示用于各个基础任务关于大模型的三大法律能力评测的指令微调数据集 SCULaiw-DataSet-FT，有关数据集更多详细信息可见 [SCULaiw-DataSet](https://github.com/Dai-shen/SCULaiw-DataSet)。数据集 SCULaiw-DataSet-FT 整理中，等待后续公布
 
-<style>
-  .align-right td:last-child
-    {
-        text-align: justify;
-        white-space: nowrap;
-    }
-
-</style>
-<table class="align-right">
+<table>
 
   <tr>
     <td>能力层级</td>
