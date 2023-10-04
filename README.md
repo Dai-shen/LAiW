@@ -200,7 +200,7 @@ python eval.py \
   </tr>
   <tr>
     <td>争议焦点挖掘</td>
-    <td>CAIL-2022</td>
+    <td>Private</td>
     <td></td>
     <td></td>
   </tr>
