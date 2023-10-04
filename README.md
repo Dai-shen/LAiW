@@ -1,20 +1,21 @@
-# ⚖️SCULaiw: Legal Evaluation Framework (BIAN)
+# ⚖️LAiw: A Large Language Models Evaluation Benchmark for Chinese Law
 
-**狴犴：中文法律大模型综合性基准**
+**LAiW：中文法律大模型综合性基准（狴犴）**
 
-🔥 [SCULaiw最新榜单](https://huggingface.co/spaces/daishen/SCULaiw)
+🔥 [LAiW最新榜单](https://huggingface.co/spaces/daishen/LAiW)
+🔥 [技术报告](XXXXX)
 
 ## 新闻
 
-💻 **最近更新** **[2023/10/02]** 
+💻 **最近更新** **[2023/10/02]**
 
-- 公布 [SCULaiw](https://github.com/Dai-shen/SCULaiw) 能力评测体系
-- 完成 ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat)，[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 等大模型的 法律 NLP 基础能力评测工作
+- 公布 [LAiW](https://github.com/Dai-shen/LAiW) 能力评测体系
+- 完成 ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat)，[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 等大模型的 法律 NLP 基础能力评测工作
 - 公布法律能力和基础任务评测分数计算方式
 
 ## Contents
 
-- [⚖️SCULaiw: Legal Evaluation Framework (BIAN)](#️sculaiw-legal-evaluation-framework-bian)
+- [⚖️LAiw: A Large Language Models Evaluation Benchmark for Chinese Law](#️laiw-a-large-language-models-evaluation-benchmark-for-chinese-law)
   - [新闻](#新闻)
   - [Contents](#contents)
     - [任务评测结构图](#任务评测结构图)
@@ -22,25 +23,25 @@
       - [环境准备](#环境准备)
       - [自动评估](#自动评估)
     - [任务](#任务)
-    - [指令微调数据集](#指令微调数据集)
+    - [LIT：指令微调数据集](#lit指令微调数据集)
     - [评分机制](#评分机制)
 
 ### 任务评测结构图
 
-<img src="https://github.com/Dai-shen/SCULaiw/blob/main/resources/task_framwork.png"  width="50%" height="50%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framwork.png"  width="50%" height="50%"></img>
 
 ### 评测
 
-- 我们将按照评测结构图中的13个基础任务持续评测现存大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/SCULaiw)。
+- 我们将按照评测结构图中的13个基础任务持续评测现存大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/LAiW)。
 - 评测模型不仅有未开源的 ChatGPT 和 GPT-4，而且还有 [Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat), [chatglm2](https://huggingface.co/THUDM/chatglm2-6b)，[HanFei](https://github.com/siat-nlp/HanFei)，[Lawyer LLaMa](https://github.com/AndrewZhe/lawyer-llama/tree/main), [智海-录问](https://modelscope.cn/models/wisdomOcean/wisdomInterrogatory/summary) 等开源的通用大模型和中文法律大模型
 
 #### 环境准备
 
 ```bash
-git clone git clone https://github.com/Dai-shen/SCULaiw.git --recursive
-cd SCULaiw
+git clone git clone https://github.com/Dai-shen/LAiW.git --recursive
+cd LAiW
 pip install -r requirements.txt
-cd SCULaiw/src/financial-evaluation
+cd LAiW/src/financial-evaluation
 pip install -e .[multilingual]
 ```
 
@@ -59,7 +60,7 @@ python eval.py \
 
 - 法律 NLP 基础能力：主要评测法律基础任务、 NLP 基础任务和法律信息抽取的能力，包括法条推送、要素识别、命名实体识别、司法要点摘要和案件识别 5 个基础任务
 - 法律知识理解能力：主要评测大模型对相关法律文本的知识理解的能力，包括刑事裁判预测、民事裁判预测、法律问答、争议焦点挖掘和类案匹配 5 个基础任务
-- 法律知识应用能力：进一步评测大模型对法律领域知识的应用能力，包括司法说理生成、案情理解和法律咨询 3 个基础任务
+- 法律知识应用能力：进一步评测大模型对法律领域知识的复杂应用能力，包括司法说理生成、案情理解和法律咨询 3 个基础任务
   
 下面是评测任务的具体描述
 
@@ -100,7 +101,7 @@ python eval.py \
   </tr>
   <tr>
     <td>类案匹配</td>
-    <td>在英美法系国家，如美国、加拿大和印度，司法裁决是根据过去类似的代表性案例做出的。因此，如何识别最相似的案件是英美法系在判决中首要关注的问题</td>
+    <td>司法裁决通常是根据过去类似的代表性案例做出的。因此，如何识别最相似的案件是判决中一个首要关注的问题</td>
   </tr>
   <tr>
     <td>刑事裁判预测</td>
@@ -131,32 +132,32 @@ python eval.py \
 
 </table>
 
-### 指令微调数据集
+### LIT：指令微调数据集
 
-这里展示用于各个基础任务关于大模型的三大法律能力评测的指令微调数据集 SCULaiw-DataSet-FT，有关数据集更多详细信息可见 [SCULaiw-DataSet](https://github.com/Dai-shen/SCULaiw-DataSet)。数据集 SCULaiw-DataSet-FT 整理中，等待后续公布
+这里展示用于各个基础任务关于大模型的三大法律能力评测的指令微调数据集 **Legal Instruction Tuning Dataset (LIT)** 的**测试**数据集，有关完整数据集更多详细信息可见 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)。LIT 数据集正在整理中，等待后续公布
 
 <table>
 
   <tr>
     <td>能力层级</td>
     <td>任务</td>
-    <td>原始数据集</td>
-    <td>指令微调<br>数据集</td>
-    <td>指令微调<br>数据集大小</td>
+    <td>主要数据集</td>
+    <td>指令微调数据集</td>
+    <td>测试集大小</td>
   </tr>
 
   <tr>
-    <td rowspan="5">法律NLP<br>基础能力</td>
+    <td rowspan="5">法律NLP基础能力</td>
     <td>法条推送</td>
     <td>CAIL-2018</td>
     <td><a href="https://www.example.com">legal_ar</a></td>
-    <td>5k</td>
+    <td>1,000</td>
   </tr>
   <tr>
     <td>要素识别</td>
     <td>CAIL-2019</td>
     <td><a href="https://www.example.com">legal_er</a></td>
-    <td>5k</td>
+    <td>1,000</td>
   </tr>
   <tr>
     <td>命名实体识别</td>
@@ -167,18 +168,18 @@ python eval.py \
   <tr>
     <td>司法要点摘要</td>
     <td>CAIL-2020</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://www.example.com">legal_js</a></td>
+    <td>364</td>
   </tr>
   <tr>
     <td>案件识别</td>
     <td>CJRC</td>
-    <td><a href="https://www.example.com">legal_er</a></td>
-    <td>10k</td>
+    <td><a href="https://www.example.com">legal_cr</a></td>
+    <td>2,000</td>
   </tr>
 
   <tr>
-    <td rowspan="5">法律知识<br>理解能力</td>
+    <td rowspan="5">法律知识理解能力</td>
     <td>刑事判决预测</td>
     <td>Criminal-S<br>MLMN</td>
     <td></td>
@@ -210,7 +211,7 @@ python eval.py \
   </tr>
 
   <tr>
-    <td rowspan="3">法律知识<br>应用能力</td>
+    <td rowspan="3">法律知识应用能力</td>
     <td>司法说理生成</td>
     <td>AC-NLG</td>
     <td></td>
