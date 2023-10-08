@@ -33,7 +33,7 @@
 
 ### 任务评测结构图
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framwork.png"  width="50%" height="50%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framwork.png"  width="70%" height="70%"></img>
 
 ### 评测任务
 
