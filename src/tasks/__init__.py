@@ -7,19 +7,11 @@ import lm_eval.base
 from . import legal
 
 TASK_REGISTRY = {
-    "legal_fpb": legal.FPB,
-    "legal_fiqasa": legal.FIQASA,
-    "legal_ner": legal.NER,
-    "legal_finqa": legal.FinQA,
-    "legal_convfinqa": legal.ConvFinQA,
-    "legal_headlines": legal.Headlines,
-    "legal_finer_ord": legal.FinerOrd,
-    "legal_fomc": legal.FOMC,
-    "legal_german": legal.German,
-    "legal_australian": legal.Australian,
-    "legal_ectsum": legal.ECTSUM,
-    "legal_edtsum": legal.EDTSUM,
     "legal_ar": legal.AR,
+    "legal_er": legal.ER,
+    "legal_ner": legal.NER,
+    "legal_cr": legal.CR,
+    "legal_js": legal.JS,
     **legal.SM_TASKS,
 }
 

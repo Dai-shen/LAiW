@@ -5,7 +5,7 @@ import os
 import sys
 
 sys.path.append('../src/metrics/BARTScore')
-print(sys.path)
+# print(sys.path)
 
 import tasks
 

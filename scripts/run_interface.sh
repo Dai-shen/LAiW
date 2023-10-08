@@ -1,5 +1,5 @@
 export CUDA_VISIBLE_DEVICES='0,1,2,3,4,7'
-export PYTHONPATH='.../PIXIU/src'
+export PYTHONPATH='.../LaiW/src'
 
 model_name_or_path='...'
 

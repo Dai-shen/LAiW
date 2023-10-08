@@ -14,7 +14,8 @@ async def single_chat(client, **kwargs):
     backoff_time = BACKOFF_TIME
     while True:
         try:
-            r = await client.post(**kwargs, timeout=20)
+            r = await client.post(**kwargs, timeout=100)
+            print(r.text)
             json_response = r.json()
             s = json_response['choices'][0]["message"]['content']
             time.sleep(backoff_time)
@@ -82,7 +83,7 @@ class ChatLM(BaseLM):
 
     @property
     def max_gen_toks(self):
-        return 10
+        return 4096 * 2
 
     @property
     def batch_size(self):
@@ -136,7 +137,7 @@ class ChatLM(BaseLM):
                 inps.append(context[0])
 
             responses = asyncio.run(oa_completion(
-                url="https://api.openai.com/v1/chat/completions",
+                url="https://api.132999.xyz/v1/chat/completions",
                 headers=self.headers,
                 model=self.model,
                 messages=[{"role": "user", "content": inp} for inp in inps],

@@ -253,7 +253,6 @@ class HuggingFaceAutoLM(BaseLM):
                 subfolder=subfolder,
                 load_in_4bit=load_in_4bit,
             )
-
         self.model.eval()
         torch.set_grad_enabled(False)
 
@@ -470,10 +469,13 @@ class HuggingFaceAutoLM(BaseLM):
             self.batch_size if self.batch_size != "auto" else adaptive_batch_size,
         ):
             context = [c[0] for c in chunk]
-            request_args = chunk[0][1]
-            stop = request_args.get("until", None)
-            stop_sequences = stop if isinstance(stop, list) else [stop]
-            max_generation_length = request_args.get("max_length", None)
+            # request_args = chunk[0][1]
+            # TODO: This is a temporary fix for unable acquiring request args from chunk
+            # stop = request_args.get("until", None)
+            # stop_sequences = stop if isinstance(stop, list) else [stop]
+            # max_generation_length = request_args.get("max_length", None)
+            stop_sequences = [None]
+            max_generation_length = None
 
             assert (
                 isinstance(max_generation_length, int) or max_generation_length is None
