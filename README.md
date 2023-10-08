@@ -4,31 +4,31 @@
 
 🔥 [LAiW最新榜单](https://huggingface.co/spaces/daishen/LAiW)
 
-🔥 [技术报告](XXXXX)，即将发布
+🔥 [技术报告](XXXXX)－即将发布
 
 ## 新闻
 
 💻 **最近更新** **[2023/10/08]**
 
 - 公布 [LAiW](https://github.com/Dai-shen/LAiW) 能力评测体系
-- 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含通用大模型: ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型:[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 
+- 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含通用大模型：ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 
 - 公布法律能力和基础任务的评测分数及计算方式
 
 ## 目录
 
-- [⚖️LAiW: A Chinese Legal Large Language Models Benchmark](#️laiw-a-chinese-legal-large-language-models-benchmark)
+- [⚖️LAiw: A Chinese Legal Large Language Models Benchmark](#️laiw-a-chinese-legal-large-language-models-benchmark)
   - [新闻](#新闻)
   - [目录](#目录)
-    - [任务评测结构图](#任务评测结构图)
-    - [评测任务](#评测任务)
-    - [LIT：指令微调数据集](#lit指令微调数据集)
-    - [评分机制](#评分机制)
-    - [评测](#评测)
-      - [环境准备](#环境准备)
-      - [自动评估](#自动评估)
-    - [项目参与者](#项目参与者)
-    - [免责声明](#免责声明)
-    - [致谢](#致谢)
+  - [任务评测结构图](#任务评测结构图)
+  - [评测任务](#评测任务)
+  - [评测数据集](#评测数据集)
+  - [评分机制](#评分机制)
+  - [评测代码](#评测代码)
+    - [环境准备](#环境准备)
+    - [自动评估](#自动评估)
+  - [项目参与者](#项目参与者)
+  - [声明](#声明)
+  - [致谢](#致谢)
 
 
 ### 任务评测结构图
@@ -37,20 +37,20 @@
 
 ### 评测任务
 
-我们经过 <strong>法学专家</strong> 的多次指导，从法学角度上评测法律 NLP 的<strong>三</strong>大能力，共计<strong>13</strong>个基础任务
+我们在 <strong>法学专家与人工智能专家</strong> 的共同努力下，从法学角度和可实现性上对法律 NLP的能力进行划分．如上图所示，目前我们将其分成了<strong>3</strong>大能力，共计<strong>13</strong>个基础任务：
 
-- 法律 NLP 基础能力：主要评测法律基础任务、 NLP 基础任务和法律信息抽取的能力，包括法条推送、要素识别、命名实体识别、司法要点摘要和案件识别 5 个基础任务
-- 法律基础应用能力：主要评测大模型对法律领域知识的基础应用能力，包括争议焦点挖掘、类案匹配、刑事裁判预测、民事裁判预测和法律问答 5 个基础任务
-- 法律复杂应用能力：进一步评测大模型对法律领域知识的复杂应用能力，包括司法说理生成、案情理解和法律咨询 3 个基础任务
+- 法律 NLP 基础能力：评测法律基础任务、 NLP 基础任务和法律信息抽取的能力，包括法条推送、要素识别、命名实体识别、司法要点摘要和案件识别 5 个基础任务
+- 法律基础应用能力：评测大模型对法律领域知识的基础应用能力，包括争议焦点挖掘、类案匹配、刑事裁判预测、民事裁判预测和法律问答 5 个基础任务
+- 法律复杂应用能力：评测大模型对法律领域知识的复杂应用能力，包括司法说理生成、案情理解和法律咨询 3 个基础任务
   
-下面是评测任务的具体描述
+下面是各评测任务的简要介绍
 
 <table>
 
   <tr>
   <td>能力</td>
   <td>任务</td>
-  <td>描述</td>
+  <td>介绍</td>
   </tr>
 
   <tr>
@@ -113,9 +113,9 @@
 
 </table>
 
-### LIT：指令微调数据集
+### 评测数据集
 
-我们调研现有中文法律的公开数据集，重新整理构建了指令微调数据集 **Legal Instruction Tuning Dataset (LIT)** ，详情可见[LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)。这里展示 **LIT** 中用于各个基础任务评测的评测数据集。**LIT** 数据集进一步整理中，等待后续公布
+我们基于现有中文法律的公开数据集，重新整理并构建了上述各个任务的评测数据集 **Legal Evaluation Dataset (LED)** ，后续我们将和其对应的可用于大模型训练的指令微调数据集进行合并并统一发布[LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)。目前，我们仅展示 **LED** 中用于第一阶段各个基础任务评测的评测数据集。
 
 <table>
 
@@ -218,15 +218,14 @@
 ### 评分机制
 
 📚 最新版本 V1.0：
+- 对于每项特定的基础任务，目前我们对分类任务采用F1值，文本生成任务采用ROUGE-1进行自动化评分计算，并作为模型在该任务上的分数 （评估指标取值范围均为 0-1 之间）
+- 对于每一项评测能力，我们将根据法学专家对于每项能力的任务难度权重分配，对各任务上的分数进行加权平均做为其能力分数
 
-- 对于每一项评测能力，其分数为所评测的所有基础子任务分数的平均值
-- 对于每项特定的基础任务，使用 **LIT** 的评测数据集，根据大模型在该任务上的输出与真实标签，客观的计算相应评估指标，作为模型在该任务上的分数 （评估指标取值范围均为 0-1 之间）
 
+### 评测代码
 
-### 评测
-
-- 我们将按照评测结构图中的13个基础任务持续评测现存大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/LAiW)。
-- 评测模型不仅有未开源的 ChatGPT 和 GPT-4，而且还有 [Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat), [chatglm2](https://huggingface.co/THUDM/chatglm2-6b)，[HanFei](https://github.com/siat-nlp/HanFei)，[Lawyer LLaMa](https://github.com/AndrewZhe/lawyer-llama/tree/main), [智海-录问](https://modelscope.cn/models/wisdomOcean/wisdomInterrogatory/summary) 等开源的通用大模型和中文法律大模型
+- 我们将按照评测结构图中的13个基础任务持续评测现有大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/LAiW)。
+- 现阶段，评测代码支持商用模型ChatGPT，以及[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat), [chatglm2](https://huggingface.co/THUDM/chatglm2-6b)，[HanFei](https://github.com/siat-nlp/HanFei)，[Lawyer LLaMa](https://github.com/AndrewZhe/lawyer-llama/tree/main), [智海-录问](https://modelscope.cn/models/wisdomOcean/wisdomInterrogatory/summary) 等开源的通用大模型和中文法律大模型
 
 #### 环境准备
 
@@ -249,18 +248,15 @@ python eval.py \
 
 
 ### 项目参与者
-本项目由来自于中科院深圳先进院得理法律人工智能联合实验室的何万伟、温嘉宝、张磊、程浩、秦博文、李云水、李之健，深圳市大数据研究院、港中文深圳的蒋峰、陈俊颖同学合作开发，指导教师为深圳市大数据研究院、港中文深圳的王本友助理教授和中科院深圳先进院的杨敏副研究员。
+本项目由四川大学的代永富、冯端宇、贾昊宸、张译方、王皓，武汉大学的谢倩倩、韩玮光、黄济民，以及西南石油大学的田维共同开发。
 
-### 免责声明
-本项目相关资源仅供学术研究之用，严禁用于商业用途。使用涉及第三方代码的部分时，请严格遵循相应的开源协议。模型生成的内容受模型计算、随机性和量化精度损失等因素影响，本项目无法对其准确性作出保证，本项目不承担任何法律责任，亦不对因使用相关资源和输出结果而可能产生的任何损失承担责任。
+### 声明
+本项目仅供学术研究使用，严禁用于商业。我们对使用该项目的任何问题，风险或不利后果不承担任何责任。
 
 ### 致谢
-本项目参考了以下开源项目，在此对相关项目和研究开发人员表示感谢。
+本项目在构建时，参考了以下开源项目，在此对相关项目和研究开发人员表示感谢。
 
-Bloom: https://huggingface.co/bigscience/bloom
+- [**Awesome Chinese Legal Resources**](https://github.com/pengxiao-song/awesome-chinese-legal-resources)
+- [**PIXIU**](https://github.com/chancefocus/PIXIU)
 
-Facebook LLaMA: https://github.com/facebookresearch/llama
 
-Stanford Alpaca: https://github.com/tatsu-lab/stanford_alpaca
-
-Self-instruct: https://github.com/yizhongw/self-instruct
