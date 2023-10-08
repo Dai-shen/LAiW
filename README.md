@@ -4,7 +4,7 @@
 
 🔥 [LAiW最新榜单](https://huggingface.co/spaces/daishen/LAiW)
 
-🔥 [技术报告](XXXXX)
+🔥 [技术报告](XXXXX)，即将发布
 
 ## 新闻
 
