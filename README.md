@@ -1,4 +1,4 @@
-# ⚖️LAiw: A Chinese Legal Large Language Models Benchmark
+# ⚖️LAiW: A Chinese Legal Large Language Models Benchmark
 
 **LAiW：中文法律大模型综合性基准（狴犴）**
 
