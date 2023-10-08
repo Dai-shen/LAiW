@@ -1,4 +1,4 @@
-# ⚖️LAiw: A Large Language Models Evaluation Benchmark for Chinese Law
+# ⚖️LAiw: A Chinese Legal Large Language Models Benchmark
 
 **LAiW：中文法律大模型综合性基准（狴犴）**
 
@@ -11,12 +11,12 @@
 💻 **最近更新** **[2023/10/02]**
 
 - 公布 [LAiW](https://github.com/Dai-shen/LAiW) 能力评测体系
-- 完成 ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat)，[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 等大模型的 法律 NLP 基础能力评测工作
-- 公布法律能力和基础任务评测分数计算方式
+- 完成 ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat)，[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 等大模型的法律 NLP 基础能力评测工作
+- 公布法律能力和基础任务的评测分数计算方式
 
 ## Contents
 
-- [⚖️LAiw: A Large Language Models Evaluation Benchmark for Chinese Law](#️laiw-a-large-language-models-evaluation-benchmark-for-chinese-law)
+- [⚖️LAiw: A Chinese Legal Large Language Models Benchmark](#️laiw-a-chinese-legal-large-language-models-benchmark)
   - [新闻](#新闻)
   - [Contents](#contents)
     - [任务评测结构图](#任务评测结构图)
@@ -74,17 +74,13 @@ python eval.py \
   </tr>
 
   <tr>
-    <td rowspan="5">法律NLP<br>基础能力</td>
+    <td rowspan="5">法律NLP基础能力</td>
     <td>法条推送</td>
     <td>该任务是司法实践应用上的基础任务，在提供法律领域的智能化支持和辅助决策上起着重要作用，旨在根据案件描述给出其相关法条</td>
   </tr>
   <tr>
     <td>要素识别</td>
     <td>在司法领域，案件要素识别任务的主要目的是从案件描述中自动提取关键事实描述。在给定司法文书的相关段落之后，系统对每句话进行分析和判断，以确定关键的案件要素</td>
-  </tr>
-  <tr>
-    <td>案件识别</td>
-    <td>民事案件和刑事案件是两种不同类型的法律案件。民事案件是解决个人纠纷和维护权益的法律程序，刑事案件是为了维护社会秩序和惩罚犯罪行为的法律程序。本任务旨在根据相关的案件描述判断其为刑事案件还是民事案件</td>
   </tr>
   <tr>
     <td>命名实体识别</td>
@@ -94,9 +90,13 @@ python eval.py \
     <td>司法要点摘要</td>
     <td>裁判文书是人民法院公开审判活动、裁判理由、裁判依据和裁判结果的重要载体。司法摘要则是对裁判文书的内容进行压缩、归纳和总结，反映案件审理过程中的裁判过程、事实、理由和判决依据等</td>
   </tr>
+  <tr>
+    <td>案件识别</td>
+    <td>民事案件和刑事案件是两种不同类型的法律案件。民事案件是解决个人纠纷和维护权益的法律程序，刑事案件是为了维护社会秩序和惩罚犯罪行为的法律程序。本任务旨在根据相关的案件描述判断其为刑事案件还是民事案件</td>
+  </tr>
 
   <tr>
-    <td rowspan="5">法律知识<br>理解能力</td>
+    <td rowspan="5">法律基础应用能力</td>
     <td>争议焦点挖掘</td>
     <td>在法院的庭审过程中，裁判文书起着记录辩、诉双方观点证据的重要作用。本任务旨在抽取出裁判文书中辩方诉方之间的逻辑交互论点对，即争议焦点</td>
   </tr>
@@ -118,7 +118,7 @@ python eval.py \
   </tr>
 
   <tr>
-    <td rowspan="3">法律知识<br>应用能力</td>
+    <td rowspan="3">法律复杂应用能力</td>
     <td>司法说理生成</td>
     <td>人民法院在认定案件事实的基础上需要就判决理由作出进一步的阐述。本任务旨在根据案件事实描述生成相关的司法说理文本</td>
   </tr>
@@ -135,7 +135,7 @@ python eval.py \
 
 ### LIT：指令微调数据集
 
-这里展示用于各个基础任务关于大模型的三大法律能力评测的指令微调数据集 **Legal Instruction Tuning Dataset (LIT)** 的**测试**数据集，有关完整数据集更多详细信息可见 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)。LIT 数据集正在整理中，等待后续公布
+我们调研现有中文法律的公开数据集，重新整理构建了指令微调数据集 **Legal Instruction Tuning Dataset (LIT)** ，详情可见[LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)。这里展示 **LIT** 中用于各个基础任务评测的评测数据集。**LIT** 数据集进一步整理中，等待后续公布
 
 <table>
 
@@ -143,39 +143,41 @@ python eval.py \
     <td>能力层级</td>
     <td>任务</td>
     <td>主要数据集</td>
-    <td>指令微调数据集</td>
-    <td>测试集大小</td>
+    <td>评测数据集</td>
+    <td>数据集大小</td>
   </tr>
 
   <tr>
     <td rowspan="5">法律NLP基础能力</td>
     <td>法条推送</td>
     <td>CAIL-2018</td>
-    <td><a href="https://www.example.com">legal_ar</a></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-ar">legal_ar</a></td>
     <td>1,000</td>
   </tr>
   <tr>
     <td>要素识别</td>
     <td>CAIL-2019</td>
-    <td><a href="https://www.example.com">legal_er</a></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-er">legal_er</a></td>
     <td>1,000</td>
   </tr>
   <tr>
     <td>命名实体识别</td>
     <td>CAIL-2021</td>
+    <!-- <td><a href="https://huggingface.co/datasets/daishen/legal-ner">legal_ner</a></td>
+    <td>156</td> -->
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>司法要点摘要</td>
     <td>CAIL-2020</td>
-    <td><a href="https://www.example.com">legal_js</a></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-js">legal_js</a></td>
     <td>364</td>
   </tr>
   <tr>
     <td>案件识别</td>
     <td>CJRC</td>
-    <td><a href="https://www.example.com">legal_cr</a></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-cr">legal_cr</a></td>
     <td>2,000</td>
   </tr>
 
@@ -237,5 +239,5 @@ python eval.py \
 
 📚 最新版本 V1.0：
 
-- 对于每一项评测能力，其分数为所评测的所有基础子任务分数的平均值，并且模型在四项能力的总分也取平均数，总分都为100分
-- 对于每项能力特定的基础任务，使用已构建的指令微调数据集，根据大模型在该任务上的输出与真实标签客观的计算相应的评估指标，作为模型在该任务上的分数 （评估指标取值范围均为 0-1 之间，任务评分 = 评估指标 * 100）
+- 对于每一项评测能力，其分数为所评测的所有基础子任务分数的平均值
+- 对于每项特定的基础任务，使用 **LIT** 数据集，根据大模型在该任务上的输出与真实标签，客观的计算相应评估指标，作为模型在该任务上的分数 （评估指标取值范围均为 0-1 之间）
