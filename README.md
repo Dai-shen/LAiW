@@ -256,6 +256,7 @@ python eval.py \
 ### 致谢
 本项目在构建时，参考了以下开源项目，在此对相关项目和研究开发人员表示感谢。
 
+- [**LLMindCraft**](https://github.com/XplainMind/LLMindCraft)
 - [**Awesome Chinese Legal Resources**](https://github.com/pengxiao-song/awesome-chinese-legal-resources)
 - [**PIXIU**](https://github.com/chancefocus/PIXIU)
 
