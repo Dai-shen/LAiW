@@ -4,12 +4,14 @@
 
 🔥 [LAiW最新榜单](https://huggingface.co/spaces/daishen/LAiW)
 
-🔥 [技术报告](XXXXX)－即将发布
+🔥 [技术报告](https://arxiv.org/abs/2310.05620)
 
 ## 新闻
 
-💻 **最近更新** **[2023/10/08]**
+💻 **最近更新** **[2023/10/12]**
+- 公布 [LAiW技术报告](https://arxiv.org/abs/2310.05620)
 
+💻 **更早讯息** **[2023/10/08]**
 - 公布 [LAiW](https://github.com/Dai-shen/LAiW) 能力评测体系
 - 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含通用大模型：ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 
 - 公布法律能力和基础任务的评测分数及计算方式
