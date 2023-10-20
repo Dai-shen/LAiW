@@ -260,6 +260,5 @@ python eval.py \
 
 - [**LLMindCraft**](https://github.com/XplainMind/LLMindCraft)
 - [**Awesome Chinese Legal Resources**](https://github.com/pengxiao-song/awesome-chinese-legal-resources)
-- [**PIXIU**](https://github.com/chancefocus/PIXIU)
 
 
