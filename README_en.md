@@ -1,5 +1,7 @@
 # ⚖️LAiW: A Chinese Legal Large Language Models Benchmark
 
+| [English](https://github.com/Dai-shen/LAiW/blob/main/README_en.md) | [中文](https://github.com/Dai-shen/LAiW/blob/main/README.md)
+
 **LAiW：A Comprehensive Benchmark for Chinese Legal Large Language Models (LLMs)**
 
 🔥 [LAiW Leaderboard](https://huggingface.co/spaces/daishen/LAiW)
@@ -264,4 +266,3 @@ This project is built upon the following open-source projects, and we are really
 
 - [**LLMindCraft**](https://github.com/XplainMind/LLMindCraft)
 - [**Awesome Chinese Legal Resources**](https://github.com/pengxiao-song/awesome-chinese-legal-resources)
-- [**PIXIU**](https://github.com/chancefocus/PIXIU)
