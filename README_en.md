@@ -38,7 +38,7 @@
 
 ### Evaluation structure diagram
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framwork_en.png"  width="70%" height="70%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framework_en.png"  width="70%" height="70%"></img>
 
 ### Tasks
 
