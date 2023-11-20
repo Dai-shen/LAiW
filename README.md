@@ -271,7 +271,7 @@ python eval.py \
 ```
 @misc{LAiW,
   title={LAiW},
-  author={Yongfu, Dai and Duanyu Feng},
+  author={Yongfu, Dai and Duanyu, Feng},
   year={2023},
   publisher={GitHub},
   journal={GitHub repository},
