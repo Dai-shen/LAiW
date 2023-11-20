@@ -35,11 +35,10 @@
     - [Contributors](#contributors)
     - [Disclaimer](#disclaimer)
     - [Acknowledgements](#acknowledgements)
-    - [Cite](#cite)
 
 ### Evaluation structure diagram
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framwork_en.png"  width="70%" height="70%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framework_en.png"  width="70%" height="70%"></img>
 
 ### Tasks
 
@@ -267,18 +266,3 @@ This project is built upon the following open-source projects, and we are really
 
 - [**LLMindCraft**](https://github.com/XplainMind/LLMindCraft)
 - [**Awesome Chinese Legal Resources**](https://github.com/pengxiao-song/awesome-chinese-legal-resources)
-
-### Cite
-
-If this project has been helpful to your research, please consider citing this project.
-
-```
-@misc{LAiW,
-  title={LAiW},
-  author={Yongfu, Dai and Duanyu Feng},
-  year={2023},
-  publisher={GitHub},
-  journal={GitHub repository},
-  howpublished={\url{https://github.com/Dai-shen/LAiW}},
-}
-```
