@@ -20,19 +20,20 @@
 
 ## 目录
 
-- [⚖️LAiw: A Chinese Legal Large Language Models Benchmark](#️laiw-a-chinese-legal-large-language-models-benchmark)
+- [⚖️LAiW: A Chinese Legal Large Language Models Benchmark](#️laiw-a-chinese-legal-large-language-models-benchmark)
   - [新闻](#新闻)
   - [目录](#目录)
-  - [任务评测结构图](#任务评测结构图)
-  - [评测任务](#评测任务)
-  - [评测数据集](#评测数据集)
-  - [评分机制](#评分机制)
-  - [评测代码](#评测代码)
-    - [环境准备](#环境准备)
-    - [自动评估](#自动评估)
-  - [项目参与者](#项目参与者)
-  - [声明](#声明)
-  - [致谢](#致谢)
+    - [任务评测结构图](#任务评测结构图)
+    - [评测任务](#评测任务)
+    - [评测数据集](#评测数据集)
+    - [评分机制](#评分机制)
+    - [评测代码](#评测代码)
+      - [环境准备](#环境准备)
+      - [自动评估](#自动评估)
+    - [项目参与者](#项目参与者)
+    - [声明](#声明)
+    - [致谢](#致谢)
+    - [引用](#引用)
 
 
 ### 任务评测结构图
@@ -263,4 +264,17 @@ python eval.py \
 - [**LLMindCraft**](https://github.com/XplainMind/LLMindCraft)
 - [**Awesome Chinese Legal Resources**](https://github.com/pengxiao-song/awesome-chinese-legal-resources)
 
+### 引用
 
+如果本项目对您的研究有所帮助，请引用本项目。
+
+```
+@misc{LAiW,
+  title={LAiW},
+  author={Yongfu, Dai and Duanyu Feng},
+  year={2023},
+  publisher={GitHub},
+  journal={GitHub repository},
+  howpublished={\url{https://github.com/Dai-shen/LAiW}},
+}
+```
