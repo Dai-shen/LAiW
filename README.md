@@ -51,15 +51,15 @@
 
 按照大模型[评分机制](#评分机制)的计算方式，这13个大模型的平均得分如下
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/overall-histogram.png"  width="70%" height="70%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/overall-histogram.png"  width="100%" height="100%"></img>
 
 其中，大模型各阶段的法律能力评测得分依次为
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/NLP-histogram.png"  width="70%" height="70%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/NLP-histogram.png"  width="100%" height="100%"></img>
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/basic-histogram.png"  width="70%" height="70%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/basic-histogram.png"  width="100%" height="100%"></img>
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/complex-histogram.png"  width="70%" height="70%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/complex-histogram.png"  width="100%" height="100%"></img>
 
 ### 评测任务
 
