@@ -7,11 +7,51 @@ import lm_eval.base
 from . import legal
 
 TASK_REGISTRY = {
+    # wyx-dmv-syn-data
+    "syn_german": legal.Syn_german,
+    # financial
+    "legal_fpb": legal.FPB,
+    "legal_fiqasa": legal.FIQASA,
+    "legal_finqa": legal.FinQA,
+    "legal_convfinqa": legal.ConvFinQA,
+    "legal_headlines": legal.Headlines,
+    "legal_finer_ord": legal.FinerOrd,
+    "legal_fomc": legal.FOMC,
+    "legal_german": legal.German,
+    "legal_australian": legal.Australian,
+    "legal_ectsum": legal.ECTSUM,
+    "legal_edtsum": legal.EDTSUM,
+    # First
     "legal_ar": legal.AR,
     "legal_er": legal.ER,
     "legal_ner": legal.NER,
     "legal_cr": legal.CR,
     "legal_js": legal.JS,
+    # Second
+    "legal_scm": legal.SCM,
+    "legal_cp": legal.CP,
+    "legal_ptp": legal.PTP,
+    "legal_ctp": legal.CTP,
+    "legal_lqa": legal.LQA,
+    "legal_cfm": legal.CFM,
+    # Third
+    "legal_jrg": legal.JRG,
+    "legal_cu": legal.CU,
+    "legal_lc": legal.LC,
+    # Tag
+    "legal_jrg_tag": legal.JRG_TAG,
+    "legal_lc_tag": legal.LC_TAG,
+    # FYB-CER
+    "legal_cer": legal.CER,
+    # chatglm-ctp
+    "legal_ctp0": legal.CTP0,
+    "legal_ctp1": legal.CTP1,
+    "legal_ctp2": legal.CTP2,
+    "legal_ctp3": legal.CTP3,
+    "legal_ctp4": legal.CTP4,
+    "legal_ctp5": legal.CTP5,
+    "legal_ctp6": legal.CTP6,
+    "legal_ctp_glm": legal.CTP_GLM, 
     **legal.SM_TASKS,
 }
 

@@ -74,7 +74,7 @@ class Classification(Task):
         # TODO: Format the query prompt portion of the document example.
         return doc["answer"]
 
-    def process_results(self, doc, results):   # {dict: 6} raw_data_json, [output]
+    def process_results(self, doc, results):  # {dict: 6} raw_data_json, [output]
         gold: str = doc["choices"][doc["gold"]]
         if self.LOWER_CASE:
             gold = gold.lower()
@@ -119,7 +119,7 @@ class Classification(Task):
 
     def weighted_f1(self, items):  # items: [('239', '205'), ('missing', '343'), ...]
         preds, golds = zip(*items)
-        labels = list(set(golds))   # choices ['205', '343', ...]
+        labels = list(set(golds))  # choices ['205', '343', ...]
         preds = np.array(preds)
         golds = np.array(golds)
         f1 = f1_score(golds, preds, average="weighted", labels=labels)
@@ -136,9 +136,10 @@ class Classification(Task):
     def matthews_corrcoef(self, items):
         preds, golds = zip(*items)
         labels = {label: i for i, label in enumerate(list(set(golds)))}
-        preds = [labels.get(pred, -1) for pred in preds]  # index of pred in labels (choices), return -1 If pred is "misiing"
+        preds = [labels.get(pred, -1) for pred in
+                 preds]  # index of pred in labels (choices), return -1 If pred is "misiing"
         golds = [labels.get(gold, -1) for gold in golds]
-        return matthews_corrcoef(golds, preds)   # sklearn.metrics lib
+        return matthews_corrcoef(golds, preds)  # sklearn.metrics lib
 
     def aggregation(self):
         metrics = {
@@ -727,7 +728,7 @@ class StockMovement(Classification):
             if self.LOWER_CASE:
                 choice = choice.lower()
             if choice in ini_result or any(
-                [val in ini_result for val in self.CHOICE_DICT[choice]]
+                    [val in ini_result for val in self.CHOICE_DICT[choice]]
             ):
                 result = choice
                 break
@@ -895,3 +896,104 @@ class JS(QA):
 
 class NER(QA):
     DATASET_PATH = "/media/data1/daiyf/legaldata/NER/"
+
+
+class SCM(Classification):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/SCM/"
+    CALCULATE_MCC = True
+
+
+class CP(Classification):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/CJP-CP/"
+    CALCULATE_MCC = True
+
+
+class PTP(Classification):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/CJP-PTP/"
+    CALCULATE_MCC = True
+
+
+class CTP(Classification):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/CTP/"
+    CALCULATE_MCC = True
+
+
+class LQA(Classification):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/LQA/"
+    CALCULATE_MCC = True
+
+
+class CFM(Classification):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/CFM/"
+    CALCULATE_MCC = True
+
+
+class JRG(QA):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/JRG/"
+
+
+class CER(QA):
+    DATASET_PATH = "/home/daiyf/daiyf/cer/src/prompt_data/"
+
+
+class CU(QA):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/CU/"
+
+
+class LC(QA):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/LC/"
+
+
+class JRG_TAG(QA):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/jrg_tag/"
+
+
+class LC_TAG(QA):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/lc_tag/"
+
+
+class Syn_german(Classification):
+    DATASET_PATH = "/media/data1/daiyf/FT-LLM/train/syn-data/german/eval-test-data/"
+    CALCULATE_MCC = True
+
+
+# chatglm-ctp
+class CTP0(Classification):
+    DATASET_PATH = "/home/daiyf/daiyf/legaldata/CTP-chatglm/CTP0/"
+    CALCULATE_MCC = True
+
+
+class CTP1(Classification):
+    DATASET_PATH = "/home/daiyf/daiyf/legaldata/CTP-chatglm/CTP1/"
+    CALCULATE_MCC = True
+
+
+class CTP2(Classification):
+    DATASET_PATH = "/home/daiyf/daiyf/legaldata/CTP-chatglm/CTP2/"
+    CALCULATE_MCC = True
+
+
+class CTP3(Classification):
+    DATASET_PATH = "/home/daiyf/daiyf/legaldata/CTP-chatglm/CTP3/"
+    CALCULATE_MCC = True
+
+
+class CTP4(Classification):
+    DATASET_PATH = "/home/daiyf/daiyf/legaldata/CTP-chatglm/CTP4/"
+    CALCULATE_MCC = True
+
+
+class CTP5(Classification):
+    DATASET_PATH = "/home/daiyf/daiyf/legaldata/CTP-chatglm/CTP5/"
+    CALCULATE_MCC = True
+
+
+class CTP6(Classification):
+    DATASET_PATH = "/home/daiyf/daiyf/legaldata/CTP-chatglm/CTP6/"
+    CALCULATE_MCC = True
+
+
+class CTP_GLM(Classification):
+    DATASET_PATH = "/media/data1/daiyf/legaldata/CTP-chatglm/"
+    CALCULATE_MCC = True
+
