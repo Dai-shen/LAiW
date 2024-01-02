@@ -1,13 +1,25 @@
-LaiW_path='/root/LaiW'
-export PYTHONPATH="$LaiW_path/src:$LaiW_path/src/financial-evaluation:$LaiW_path/src/metrics/BARTScore"
-echo $PYTHONPATH
-export CUDA_VISIBLE_DEVICES="0"
+gpu_devices="1,2"
+tasks_name=""  # task in TASK_REGISTRY
 
-python src/eval.py \
-    --model hf-causal-llama \
-    --tasks flare_edtsum,flare_ectsum \
-    --model_args use_accelerate=True,pretrained=baichuan-inc/Baichuan2-13B-Chat,tokenizer=baichuan-inc/Baichuan2-13B-Chat,use_fast=False,max_gen_toks=1024,dtype=float16 \
+model_name="baichuan2-13b"
+pretrained_model="model_path"
+
+file_path="../result/$model_name/$tasks_name.log"
+write_out_path="../result/$model_name/write_out/"
+mkdir -p "$(dirname "$file_path")"
+mkdir -p "$(dirname "$write_out_path")"
+
+export CUDA_VISIBLE_DEVICES="$gpu_devices"
+echo "$file_path"
+nohup python -u ../src/eval.py \
+    --model "hf-causal-experimental" \
+    --model_args "use_accelerate=True,pretrained=$pretrained_model,tokenizer=$pretrained_model,use_fast=False,trust_remote_code=True" \
+    --tasks "$tasks_name" \
     --no_cache \
-    --batch_size 4 \
     --num_fewshot 0 \
-    --write_out 
+    --write_out \
+    --output_base_path "$write_out_path" \
+    > "$file_path" 2>&1 &
+
+# --model info --> src/financial-evaluation/lm_eval/models/__init__.py
+
