@@ -48,8 +48,8 @@ class AnthropicLM(BaseLM):
         """
         super().__init__()
         import anthropic
-        self.model = model
 
+        self.model = model
         self.client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
     @property
