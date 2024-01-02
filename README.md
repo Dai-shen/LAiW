@@ -4,19 +4,25 @@
 
 **LAiW：中文法律大模型综合性基准（狴犴）**
 
-🔥 [LAiW最新榜单](https://huggingface.co/spaces/daishen/LAiW)
+🔥 [LAiW最新评测结果](https://huggingface.co/spaces/daishen/SCULAiW)
 
 🔥 [技术报告](https://arxiv.org/abs/2310.05620)
 
 ## 新闻
 
-💻 **最近更新** **[2023/10/12]**
-- 公布 [LAiW技术报告](https://arxiv.org/abs/2310.05620)
+🔄 **最近更新** **[2023/10/12]**
 
-💻 **更早讯息** **[2023/10/08]**
-- 公布 [LAiW](https://github.com/Dai-shen/LAiW) 能力评测体系
-- 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含通用大模型：ChatGPT ，[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT) 
-- 公布法律能力和基础任务的评测分数及计算方式
+- [2024/1/2] 公布了大模型法律能力[评分机制](#评分机制)，公布大模型[评测分数](#模型得分)
+- [2024/1/2] 公布了13个基础任务的[测试数据集](https://huggingface.co/daishen)
+- [2024/1/1] 更新了 [LAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
+- [2024/12/31] 完成了主流大模型的法律能力评测工作。评测过程中，除前述工作提及的模型外，新增通用大模型 [chatglm](https://huggingface.co/THUDM/chatglm-6b) 和法律大模型 [lawyer-llama](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)，[fuzi](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)，[Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory)，[LexiLaw](https://github.com/CSHaitao/LexiLaw)
+
+📝 **更早讯息** **[2023/10/08]**
+
+- [2023/10/12] 公布 [LAiW技术报告](https://arxiv.org/abs/2310.05620)初版
+- [2023/10/08] 公布 [LAiW](https://github.com/Dai-shen/LAiW) 第一阶段能力评测体系
+- [2023/10/08] 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含商用大模型：ChatGPT；通用大模型：[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT)
+- [2023/10/08] 公布法律能力和基础任务的评测分数及计算方式
 
 ## 目录
 
@@ -24,6 +30,7 @@
   - [新闻](#新闻)
   - [目录](#目录)
     - [任务评测结构图](#任务评测结构图)
+    - [模型得分](#模型得分)
     - [评测任务](#评测任务)
     - [评测数据集](#评测数据集)
     - [评分机制](#评分机制)
@@ -39,6 +46,20 @@
 ### 任务评测结构图
 
 <img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framwork.png"  width="70%" height="70%"></img>
+
+### 模型得分
+
+按照大模型[评分机制](#评分机制)的计算方式，这13个大模型的平均得分如下
+
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/overall-histogram.png"  width="70%" height="70%"></img>
+
+其中，大模型各阶段的法律能力评测得分依次为
+
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/NLP-histogram.png"  width="70%" height="70%"></img>
+
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/basic-histogram.png"  width="70%" height="70%"></img>
+
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/complex-histogram.png"  width="70%" height="70%"></img>
 
 ### 评测任务
 
@@ -130,6 +151,7 @@
     <td>主要数据集</td>
     <td>评测数据集</td>
     <td>数据集大小</td>
+    <td>类别</td>
   </tr>
 
   <tr>
@@ -138,99 +160,127 @@
     <td>CAIL-2018</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-ar">legal_ar</a></td>
     <td>1,000</td>
+    <td>分类</td>
   </tr>
   <tr>
     <td>要素识别</td>
     <td>CAIL-2019</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-er">legal_er</a></td>
     <td>1,000</td>
+    <td>分类</td>
   </tr>
   <tr>
     <td>命名实体识别</td>
     <td>CAIL-2021</td>
-    <!-- <td><a href="https://huggingface.co/datasets/daishen/legal-ner">legal_ner</a></td>
-    <td>156</td> -->
-    <td></td>
-    <td></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-ner">legal_ner</a></td>
+    <td>1040</td>
+    <td>命名实体识别</td>
   </tr>
   <tr>
     <td>司法要点摘要</td>
     <td>CAIL-2020</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-js">legal_js</a></td>
     <td>364</td>
+    <td>文本生成</td>
   </tr>
   <tr>
     <td>案件识别</td>
     <td>CJRC</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-cr">legal_cr</a></td>
     <td>2,000</td>
-  </tr>
-
-  <tr>
-    <td rowspan="5">法律知识理解能力</td>
-    <td>刑事判决预测</td>
-    <td>Criminal-S<br>MLMN</td>
-    <td></td>
-    <td></td>
+    <td>分类</td>
   </tr>
   <tr>
-    <td>民事裁判预测</td>
-    <td>MSJudeg</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>法律问答</td>
-    <td>JEC-QA</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
+    <td rowspan="6">法律知识理解能力</td>
     <td>争议焦点挖掘</td>
     <td>Private</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-cfm">legal_cfm</a></td>
+    <td>306</td>
+    <td>分类</td>
   </tr>
   <tr>
     <td>类案匹配</td>
     <td>CAIL-2019</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-scm">legal_scm</a></td>
+    <td>260</td>
+    <td>分类</td>
+  </tr>
+  <tr>
+    <td rowspan="2">刑事判决预测</td>
+    <td>Criminal-S</td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-cp">legal_cp</a></td>
+    <td>827</td>
+    <td>分类</td>
+  </tr>
+  <tr>
+    <td>MLMN</td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-ptp">legal_ptp</a></td>
+    <td>349</td>
+    <td>分类</td>
+  </tr>
+  <tr>
+    <td>民事裁判预测</td>
+    <td>MSJudeg</td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-ctp">legal_ctp</a></td>
+    <td>700</td>
+    <td>分类</td>
+  </tr>
+  <tr>
+    <td>法律问答</td>
+    <td>JEC-QA</td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-lqa">legal_lqa</a></td>
+    <td>855</td>
+    <td>分类</td>
   </tr>
 
   <tr>
     <td rowspan="3">法律知识应用能力</td>
     <td>司法说理生成</td>
     <td>AC-NLG</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-jrg">legal_jrg</a></td>
+    <td>834</td>
+    <td>文本生成</td>
   </tr>
   <tr>
     <td>案情理解</td>
     <td>CJRC</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-cu">legal_cu</a></td>
+    <td>1,054</td>
+    <td>文本生成</td>
   </tr>
   <tr>
     <td>法律咨询</td>
     <td>CrimeKgAssitant</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://huggingface.co/datasets/daishen/legal-lc">legal_lc</a></td>
+    <td>916</td>
+    <td>文本生成</td>
   </tr>
 
 </table>
 
 ### 评分机制
 
-📚 最新版本 V1.0：
-- 对于每项特定的基础任务，目前我们对分类任务采用F1值，文本生成任务采用ROUGE-1进行自动化评分计算，并作为模型在该任务上的分数 （评估指标取值范围均为 0-1 之间）
-- 对于每一项评测能力，我们将根据法学专家对于每项能力的任务难度权重分配，对各任务上的分数进行加权平均做为其能力分数
+⭐️ 任务得分
+<div align="center">
 
+$$
+S_{(Task)} = \begin{cases}
+    F1 * 100, & \text{If }\quad Task\quad\in\quad Classification \\
+    \frac{1}{3}*(R1 + R2 + RL) * 100, & \text{If }\quad Task \quad\in\quad Text\quad Generation \\
+    Acc * 100, & \text{If }\quad Task\quad\in\quad NER
+\end{cases}
+$$
+
+</div>
+
+目前，我们的评测基准主要包含分类任务和文本生成任务两类。对于分类任务，我们采用F1值，对于文本生成任务，我们采用其Rouge1，Rouge2和RougeL的均值。特别地，对于法律NER任务，我们采用法律实体的提取准确率Accuracy作为其得分。
+
+🌟 模型得分
+对于单个大模型，我们首先计算每个阶段的任务平均分数作为其该项法律能力得分。然后取三项法律能力得分的均值作为大模型的最终评测分数。模型评测分数见[这里](#模型得分)。
 
 ### 评测代码
 
-- 我们将按照评测结构图中的13个基础任务持续评测现有大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/LAiW)。
-- 现阶段，评测代码支持商用模型ChatGPT，以及[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat), [chatglm2](https://huggingface.co/THUDM/chatglm2-6b)，[HanFei](https://github.com/siat-nlp/HanFei)，[Lawyer LLaMa](https://github.com/AndrewZhe/lawyer-llama/tree/main), [智海-录问](https://modelscope.cn/models/wisdomOcean/wisdomInterrogatory/summary) 等开源的通用大模型和中文法律大模型
+我们将按照评测结构图中的13个基础任务持续评测现有大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/SCULAiW)。
 
 #### 环境准备
 
@@ -245,12 +295,21 @@ pip install -e .[multilingual]
 #### 自动评估
 
 ```bash
+export CUDA_VISIBLE_DEVICES="1,2"
 python eval.py \
     --model "hf-causal-experimental" \
-    --model_args "use_accelerate=True,pretrained=baichuan-inc/Baichuan2-13B-Chat,tokenizer=baichuan-inc/Baichuan2-13B-Chat,use_fast=False" \
-    --tasks "legal_ar,legal_er,legal_ner"
+    --model_args "use_accelerate=True,pretrained=$pretrained_model,tokenizer=$pretrained_model,use_fast=False,trust_remote_code=True" \
+    --tasks "legal_ar,legal_er,legal_js" \
+    --no_cache \
+    --num_fewshot 0 \
+    --write_out \
+    --output_base_path ""
 ```
-
+参数说明
+- `model`：模型接口类型，可选参数见`src/financial-evaluation/lm_eval/models/__init__.py`
+- `tasks`：预定义的任务名，可在`src/tasks/_init_.py`和`src/tasks/legal.py`定义自己的任务
+- `pretrained_model`：大模型路径（huggingface空间或模型本地路径）
+- `output_base_path`: 模型保存路径
 
 ### 项目参与者
 本项目由四川大学的代永富、冯端宇、贾昊宸、张译方、王皓，武汉大学的谢倩倩、韩玮光、黄济民，以及西南石油大学的田维共同开发。
