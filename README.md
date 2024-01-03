@@ -15,13 +15,13 @@
 - [2024/1/2] 公布了大模型法律能力[评分机制](#评分机制)，公布大模型[评测分数](#模型得分)
 - [2024/1/2] 公布了13个基础任务的[测试数据集](https://huggingface.co/daishen)
 - [2024/1/1] 更新了 [LAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
-- [2024/12/31] 完成了主流大模型的法律能力评测工作。评测过程中，除前述工作提及的模型外，新增通用大模型 [chatglm](https://huggingface.co/THUDM/chatglm-6b) 和法律大模型 [lawyer-llama](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)，[fuzi](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)，[Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory)，[LexiLaw](https://github.com/CSHaitao/LexiLaw)
+- [2024/12/31] 完成了主流大模型的法律能力评测工作。评测过程中，除前述工作提及的模型外，新增通用大模型 [ChatGLM](https://huggingface.co/THUDM/chatglm-6b) 和法律大模型 [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)，[Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)，[Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory)，[LexiLaw](https://github.com/CSHaitao/LexiLaw)
 
 📝 **更早讯息** **[2023/10/08]**
 
 - [2023/10/12] 公布 [LAiW技术报告](https://arxiv.org/abs/2310.05620)初版
 - [2023/10/08] 公布 [LAiW](https://github.com/Dai-shen/LAiW) 第一阶段能力评测体系
-- [2023/10/08] 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含商用大模型：ChatGPT；通用大模型：[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LawGPT](https://github.com/pengxiao-song/LaWGPT)
+- [2023/10/08] 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含商用大模型：ChatGPT；通用大模型：[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LaWGPT](https://github.com/pengxiao-song/LaWGPT)
 - [2023/10/08] 公布法律能力和基础任务的评测分数及计算方式
 
 ## 目录
@@ -49,11 +49,27 @@
 
 ### 模型得分
 
-按照大模型[评分机制](#评分机制)的计算方式，这13个大模型的平均得分如下
+按照大模型[评分机制](#评分机制)的计算方式，现阶段我们评测了7个主流法律大模型和6个通用大模型，模型得分如下
+
+| 模型 | 参数 | 模型<br>领域 | 总分 | 法律NLP<br>基础能力 | 法律基础<br>应用能力 | 法律复杂<br>应用能力 | 基模型 |
+| :---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ChatGPT | - | 通用 | 62.81 | 73.22 | 55.31 | 57.95 | - |
+| [Baichuan2-Chat](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat) | 13B | 通用 | 45.15 | 51.85 | 30.54 | 58.33 | - |
+| [ChatGLM](https://huggingface.co/THUDM/chatglm-6b)   | 6B | 通用 | 43.52 | 48.56 | 33.14 | 52.44 | - |
+| [Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) | 13B | 通用 | 42.76 | 58.86 | 24.45 | 46.45 | Llama-13B |
+| [Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)  | 6B | 法律 | 35.09 | 36.79 | 21.61 | 54.71 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
+| [HanFei](https://github.com/siat-nlp/HanFei)   | 7B | 法律 | 33.36 | 35.90 | 18.80 | 53.37 | - |
+| [LexiLaw](https://github.com/CSHaitao/LexiLaw)   | 6B | 法律 | 28.54 | 38.23 | 9.74 | 43.73 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
+| [Llama2-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)    | 7B | 通用 | 27.54 | 30.75 | 17.69 | 38.62 | - |
+| [ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)  | 13B | 法律 | 26.00 | 55.36 | 8.18 | 6.74 | [Ziya-LLaMA-13B](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) |
+| [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)  | 13B | 法律 | 25.14 | 27.64 | 7.43 | 50.50 | [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
+| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 7B | 通用 | 22.92 | 20.49 | 18.61 | 34.16 | Llama-7B |
+| [LaWGPT](https://github.com/pengxiao-song/LaWGPT)      | 7B | 法律 | 19.94 | 13.83 | 15.01 | 38.32 | [Chinese-LLaMA-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
+| [Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory) | 7B | 法律 | 17.39 | 13.03 | 12.17 | 33.37 | [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) |
+
+其中，大模型法律能力评测总得分和各层级法律能力得分排名依次为
 
 <img src="https://github.com/Dai-shen/LAiW/blob/main/resources/overall-histogram.png"  width="100%" height="100%"></img>
-
-其中，大模型各阶段的法律能力评测得分依次为
 
 <img src="https://github.com/Dai-shen/LAiW/blob/main/resources/NLP-histogram.png"  width="100%" height="100%"></img>
 
