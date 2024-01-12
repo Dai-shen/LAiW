@@ -66,18 +66,18 @@
 | [Baichuan2-Chat](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat) | 13B | 通用 | 45.87 | 53.67 | 30.54 | 58.40 | - |
 | [ChatGLM](https://huggingface.co/THUDM/chatglm-6b)   | 6B | 通用 | 44.17 | 51.51 | 33.26 | 52.44 | - |
 | [Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) | 13B | 通用 | 43.76 | 61.47 | 24.45 | 46.45 | Llama-13B |
-| [Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)  | 6B | 法律 | 37.49 |  |  | 54.71 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
-| [HanFei](https://github.com/siat-nlp/HanFei)   | 7B | 法律 | 33.36 | 35.90 | 18.80 | 53.37 | - |
-| [LexiLaw](https://github.com/CSHaitao/LexiLaw)   | 6B | 法律 | 28.54 | 38.23 | 9.74 | 43.73 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
-| [ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)  | 13B | 法律 | 26.00 | 55.36 | 8.18 | 6.74 | [Ziya-LLaMA-13B](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) |
-| [Llama2-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)    | 7B | 通用 | 27.54 | 30.75 | 17.69 | 38.62 | - |
-| [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)  | 13B | 法律 | 25.14 | 27.64 | 7.43 | 50.50 | [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
-| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 13B | 通用 | 22.92 | 20.49 | 18.61 | 34.16 | Llama-7B |
-| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 7B | 通用 | 22.92 | 20.49 | 18.61 | 34.16 | Llama-7B |
-| [LaWGPT](https://github.com/pengxiao-song/LaWGPT)      | 7B | 法律 | 19.94 | 13.83 | 15.01 | 38.32 | [Chinese-LLaMA-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
-| Llama | 13B | 通用 | 27.54 | 30.75 | 17.69 | 38.62 | - |
-| [Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory) | 7B | 法律 | 17.39 | 13.03 | 12.17 | 33.37 | [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) |
-| Llama | 7B | 通用 | 27.54 | 30.75 | 17.69 | 38.62 | - |
+| [Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)  | 6B | 法律 | 37.49 | 39.68 | 24.96 | 54.71 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
+| [HanFei](https://github.com/siat-nlp/HanFei)   | 7B | 法律 | 33.36 | 37.42 | 18.80 | 53.31 | - |
+| [LexiLaw](https://github.com/CSHaitao/LexiLaw)   | 6B | 法律 | 29.71 | 41.32 | 9.67 | 43.73 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
+| [ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)  | 13B | 法律 | 27.02 | 58.02 | 8.18 | 6.74 | [Ziya-LLaMA-13B](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) |
+| [Llama2-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)    | 7B | 通用 | 26.63 | 31.86 | 14.20 | 38.64 | - |
+| [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)  | 13B | 法律 | 26.38 | 30.85 | 7.43 | 50.50 | [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
+| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 13B | 通用 | 23.97 | 21.02 | 20.43 | 34.80 | Llama-13B |
+| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 7B | 通用 | 23.62 | 22.32 | 18.61 | 37.16 | Llama-7B |
+| [LaWGPT](https://github.com/pengxiao-song/LaWGPT)      | 7B | 法律 | 20.57 | 15.47 | 15.02 | 38.32 | [Chinese-LLaMA-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
+| Llama | 13B | 通用 | 19.32 | 18.51 | 13.84 | 29.40 | - |
+| [Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory) | 7B | 法律 | 17.25 | 12.66 | 12.17 | 33.37 | [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) |
+| Llama | 7B | 通用 | 15.19 | 11.12 | 14.86 | 22.54 | - |
 
 其中，大模型法律能力评测总得分和各层级法律能力得分排名依次为
 
@@ -346,7 +346,7 @@ python eval.py \
 
 #### 3.自动评测
 
-然后按照 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet) 的数据集使用方式计算评测指标
+然后按照 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet) 的数据集使用方式，运行代码 `precision/compute_metrics.py` 计算评测指标
 
 ### 项目参与者
 
