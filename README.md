@@ -10,15 +10,23 @@
 
 ## 新闻
 
-🔄 **最近更新** **[2023/10/12]**
+📝 **即将更新**
+
+- 增加 [LAiW](https://github.com/Dai-shen/LAiW) 的人工评测方式及相关结果
+- 更新 [LAiW技术报告](https://arxiv.org/abs/2310.05620) 初版
+- [2024/1/12] 公布我们的评测数据集项目 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)，提供数据集更多详细信息和模型评测指标的自动计算
+
+🔄 **最近更新**
+
+- [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
+- [2024/1/10] 新增基模型 Llama-7B, Llama13B 和 [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
+
+📅 **更早讯息**
 
 - [2024/1/2] 公布了大模型法律能力[评分机制](#评分机制)，公布大模型[评测分数](#模型得分)
 - [2024/1/2] 公布了13个基础任务的[测试数据集](https://huggingface.co/daishen)
-- [2024/1/1] 更新了 [LAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
+- [2024/1/1] 更新了 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
 - [2024/12/31] 完成了主流大模型的法律能力评测工作。评测过程中，除前述工作提及的模型外，新增通用大模型 [ChatGLM](https://huggingface.co/THUDM/chatglm-6b) 和法律大模型 [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)，[Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)，[Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory)，[LexiLaw](https://github.com/CSHaitao/LexiLaw)
-
-📝 **更早讯息** **[2023/10/08]**
-
 - [2023/10/12] 公布 [LAiW技术报告](https://arxiv.org/abs/2310.05620)初版
 - [2023/10/08] 公布 [LAiW](https://github.com/Dai-shen/LAiW) 第一阶段能力评测体系
 - [2023/10/08] 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含商用大模型：ChatGPT；通用大模型：[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LaWGPT](https://github.com/pengxiao-song/LaWGPT)
@@ -35,13 +43,13 @@
     - [评测数据集](#评测数据集)
     - [评分机制](#评分机制)
     - [评测代码](#评测代码)
-      - [环境准备](#环境准备)
-      - [自动评估](#自动评估)
+      - [1.环境准备](#1环境准备)
+      - [2.模型输出](#2模型输出)
+      - [3.自动评测](#3自动评测)
     - [项目参与者](#项目参与者)
     - [声明](#声明)
     - [致谢](#致谢)
     - [引用](#引用)
-
 
 ### 任务评测结构图
 
@@ -299,7 +307,7 @@ $$
 
 我们将按照评测结构图中的13个基础任务持续评测现有大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/SCULAiW)。
 
-#### 环境准备
+#### 1.环境准备
 
 ```bash
 git clone git clone https://github.com/Dai-shen/LAiW.git --recursive
@@ -309,7 +317,9 @@ cd LAiW/src/financial-evaluation
 pip install -e .[multilingual]
 ```
 
-#### 自动评估
+#### 2.模型输出
+
+选取待评测的模型和法律任务，运行以下代码，得到模型输出
 
 ```bash
 export CUDA_VISIBLE_DEVICES="1,2"
@@ -322,19 +332,28 @@ python eval.py \
     --write_out \
     --output_base_path ""
 ```
+
 参数说明
+
 - `model`：模型接口类型，可选参数见`src/financial-evaluation/lm_eval/models/__init__.py`
 - `tasks`：预定义的任务名，可在`src/tasks/_init_.py`和`src/tasks/legal.py`定义自己的任务
 - `pretrained_model`：大模型路径（huggingface空间或模型本地路径）
 - `output_base_path`: 模型保存路径
 
+#### 3.自动评测
+
+然后按照 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet) 的数据集使用方式计算评测指标
+
 ### 项目参与者
+
 本项目由四川大学的代永富、冯端宇、贾昊宸、张译方、王皓，武汉大学的谢倩倩、韩玮光、黄济民，以及西南石油大学的田维共同开发。
 
 ### 声明
+
 本项目仅供学术研究使用，严禁用于商业。我们对使用该项目的任何问题，风险或不利后果不承担任何责任。
 
 ### 致谢
+
 本项目在构建时，参考了以下开源项目，在此对相关项目和研究开发人员表示感谢。
 
 - [**LLMindCraft**](https://github.com/XplainMind/LLMindCraft)
