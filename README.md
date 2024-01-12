@@ -14,7 +14,7 @@
 
 - 增加 [LAiW](https://github.com/Dai-shen/LAiW) 的人工评测方式及相关结果
 - 更新 [LAiW技术报告](https://arxiv.org/abs/2310.05620) 初版
-- [2024/1/12] 公布我们的评测数据集项目 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)，提供数据集更多详细信息和模型评测指标的自动计算
+- 公布我们的评测数据集项目 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)，提供数据集更多详细信息，同时给出模型评测指标的自动计算
 
 🔄 **最近更新**
 
