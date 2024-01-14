@@ -18,7 +18,7 @@
 
 🔄 **最近更新**
 
-- [2024/1/14] 公布我们的评测数据集项目 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)，提供数据集更多详细信息，同时给出模型评测指标的自动计算
+- [2024/1/14] 提供评测数据集更多[详细信息](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)，同时给出模型评测指标 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的计算方式
 - [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
 - [2024/1/10] 新增商用大模型 GPT-4 和 通用大模型 Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
 
@@ -170,7 +170,7 @@
 
 ### 评测数据集
 
-我们基于现有中文法律的公开数据集，重新整理并构建了上述各个任务的评测数据集 **Legal Evaluation Dataset (LED)** ，后续我们将和其对应的可用于大模型训练的指令微调数据集进行合并并统一发布[LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)。目前，我们仅展示 **LED** 中用于第一阶段各个基础任务评测的评测数据集。
+我们基于现有中文法律的公开数据集，重新整理并构建了上述各个任务的评测数据集 **Legal Evaluation Dataset (LED)** ，后续我们将和其对应的可用于大模型训练的指令微调数据集进行合并并统一发布法律指令微调数据集 [Legal Instruction Tuning Dataset (LIT)](https://huggingface.co/datasets/daishen/LIT)。目前，我们仅展示其各个基础任务评测的评测数据集。有关数据集更多详细信息请查看[这里](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)
 
 <table>
 
@@ -347,7 +347,26 @@ python eval.py \
 
 #### 3.自动评测
 
-然后按照 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet) 的数据集使用方式，运行代码 `precision/compute_metrics.py` 计算评测指标
+将模型输出文件保存在 `precision/eval_results/` 目录下。假设评测模型 [Fuzi-Mingcha-6B](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)，和 [HanFei-7B](https://github.com/siat-nlp/HanFei)，则每个模型路径下包含13个基础任务（涵盖14个评测数据集）的输出文件，文件结构应该如下：
+
+```
+eval_results/
+├── Fuzi-Mingcha-6B/
+│   ├── legal_ar_write_out_info.json
+│   ├── legal_er_write_out_info.json
+│       ......
+│   ├── legal_cu_write_out_info.json
+│   ├── legal_lc_write_out_info.json
+├── HanFei-7B/
+│   ├── legal_ar_write_out_info.json
+│   ├── legal_er_write_out_info.json
+│       ......
+│   ├── legal_cu_write_out_info.json
+│   ├── legal_lc_write_out_info.json
+```
+
+然后运行 `precision/compute_metrics.py` 对各模型各任务的输出进行自动评测，评测结果保存至 `precision/metrics_result/` 目录下
+注：本项目的评测结果可在[LAiW Leaderboard](https://huggingface.co/spaces/daishen/SCULAiW)查看
 
 ### 项目参与者
 
