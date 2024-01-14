@@ -12,12 +12,13 @@
 
 📝 **即将更新**
 
+- 增加通用大模型 [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) 的评测结果
 - 增加 [LAiW](https://github.com/Dai-shen/LAiW) 的人工评测方式及相关结果
 - 更新 [LAiW技术报告](https://arxiv.org/abs/2310.05620) 初版
-- 公布我们的评测数据集项目 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)，提供数据集更多详细信息，同时给出模型评测指标的自动计算
 
 🔄 **最近更新**
 
+- [2024/1/14] 公布我们的评测数据集项目 [LAiW-DataSet](https://github.com/Dai-shen/LAiW-DataSet)，提供数据集更多详细信息，同时给出模型评测指标的自动计算
 - [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
 - [2024/1/10] 新增商用大模型 GPT-4 和 通用大模型 Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
 
