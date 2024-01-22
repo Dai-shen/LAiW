@@ -12,18 +12,18 @@
 
 📝 **即将更新**
 
-- 增加通用大模型 [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) 的评测结果
 - 增加 [LAiW](https://github.com/Dai-shen/LAiW) 的人工评测方式及相关结果
 - 更新 [LAiW技术报告](https://arxiv.org/abs/2310.05620) 初版
 
 🔄 **最近更新**
 
-- [2024/1/14] 提供评测数据集更多[详细信息](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)，同时给出模型评测指标 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的计算方式
-- [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
-- [2024/1/10] 新增商用大模型 GPT-4 和 通用大模型 Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
+- [2024/1/22] 增加通用大模型 [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) 的评测结果
 
 📅 **更早讯息**
 
+- [2024/1/14] 提供评测数据集更多[详细信息](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)，同时给出模型评测指标 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的计算方式
+- [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
+- [2024/1/10] 新增商用大模型 GPT-4 和 通用大模型 Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
 - [2024/1/2] 公布了大模型法律能力[评分机制](#评分机制)，公布大模型[评测分数](#模型得分)
 - [2024/1/2] 公布了13个基础任务的[测试数据集](https://huggingface.co/daishen)
 - [2024/1/1] 更新了 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
@@ -75,6 +75,7 @@
 | [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)  | 13B | 法律 | 26.38 | 30.85 | 7.43 | 50.50 | [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
 | [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 13B | 通用 | 23.97 | 21.02 | 20.43 | 34.80 | Llama-13B |
 | [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 7B | 通用 | 23.62 | 22.32 | 18.61 | 37.16 | Llama-7B |
+| [Baichuan](https://github.com/baichuan-inc/Baichuan-7B) | 7B | 通用 | 22.33 | 21.20 | 18.33 | 30.86 | - |
 | [LaWGPT](https://github.com/pengxiao-song/LaWGPT)      | 7B | 法律 | 20.57 | 15.47 | 15.02 | 38.32 | [Chinese-LLaMA-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
 | Llama | 13B | 通用 | 19.32 | 18.51 | 13.84 | 29.40 | - |
 | [Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory) | 7B | 法律 | 17.25 | 12.66 | 12.17 | 33.37 | [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) |
@@ -251,7 +252,7 @@
     <td>民事裁判预测</td>
     <td>MSJudeg</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-ctp">legal_ctp</a></td>
-    <td>700</td>
+    <td>800</td>
     <td>分类</td>
   </tr>
   <tr>
