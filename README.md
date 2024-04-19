@@ -21,12 +21,12 @@
 - [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
 - [2024/1/10] 新增商用大模型 GPT-4 和 通用大模型 Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
 - [2024/1/2] 公布了大模型法律能力[评分机制](#评分机制)，公布大模型[评测分数](#模型得分)
-- [2024/1/2] 公布了13个基础任务的[测试数据集](https://huggingface.co/daishen)
+- [2024/1/2] 公布了14个基础任务的[测试数据集](https://huggingface.co/daishen)
 - [2024/1/1] 更新了 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
 - [2024/12/31] 完成了主流大模型的法律能力评测工作。评测过程中，除前述工作提及的模型外，新增通用大模型 [ChatGLM](https://huggingface.co/THUDM/chatglm-6b) 和法律大模型 [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)，[Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)，[Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory)，[LexiLaw](https://github.com/CSHaitao/LexiLaw)
 - [2023/10/12] 公布 [LAiW技术报告](https://arxiv.org/abs/2310.05620)初版
 - [2023/10/08] 公布 [LAiW](https://github.com/Dai-shen/LAiW) 第一阶段能力评测体系
-- [2023/10/08] 完成第一阶段大模型的法律 NLP 基础能力评测工作,包含商用大模型：ChatGPT；通用大模型：[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LaWGPT](https://github.com/pengxiao-song/LaWGPT)
+- [2023/10/08] 完成第一阶段大模型的基础信息检索能力评测工作,包含商用大模型：ChatGPT；通用大模型：[Llama2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)，[Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1)，[Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca)，[Baichuan2](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat); 以及法律大模型：[HanFei](https://github.com/siat-nlp/HanFei)，[ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)，[LaWGPT](https://github.com/pengxiao-song/LaWGPT)
 - [2023/10/08] 公布法律能力和基础任务的评测分数及计算方式
 
 ## 目录
@@ -91,8 +91,8 @@
 
 我们在 <strong>法学专家与人工智能专家</strong> 的共同努力下，从法学角度和可实现性上对法律 NLP的能力进行划分．如上图所示，目前我们将其分成了<strong>3</strong>大能力，共计<strong>14</strong>个基础任务：
 
-- 法律 NLP 基础能力：评测法律基础任务、 NLP 基础任务和法律信息抽取的能力，包括法条推送、要素识别、命名实体识别、司法要点摘要和案件识别 5 个基础任务
-- 法律基础应用能力：评测大模型对法律领域知识的基础应用能力，包括争议焦点挖掘、类案匹配、刑事裁判预测、民事裁判预测和法律问答 5 个基础任务
+- 基础信息检索能力：评测法律基础任务、 NLP 基础任务和法律信息抽取的能力，包括法条推送、要素识别、命名实体识别、司法要点摘要和案件识别 5 个基础任务
+- 法律基础推理能力：评测大模型对法律领域知识的基础应用能力，包括争议焦点挖掘、类案匹配、罪名预测、刑期预测和民事裁判预测和法律问答 6 个基础任务
 - 法律复杂应用能力：评测大模型对法律领域知识的复杂应用能力，包括司法说理生成、案情理解和法律咨询 3 个基础任务
   
 下面是各评测任务的简要介绍
@@ -181,7 +181,7 @@
   </tr>
 
   <tr>
-    <td rowspan="5">法律NLP基础能力</td>
+    <td rowspan="5">基础信息检索</td>
     <td>法条推送</td>
     <td>CAIL-2018</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-ar">legal_ar</a></td>
@@ -217,7 +217,7 @@
     <td>分类</td>
   </tr>
   <tr>
-    <td rowspan="6">法律知识理解能力</td>
+    <td rowspan="6">法律基础推理</td>
     <td>争议焦点挖掘</td>
     <td>LAIC-2021</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-cfm">legal_cfm</a></td>
@@ -232,13 +232,14 @@
     <td>分类</td>
   </tr>
   <tr>
-    <td rowspan="2">刑事判决预测</td>
+    <td>罪名预测</td>
     <td>Criminal-S</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-cp">legal_cp</a></td>
     <td>827</td>
     <td>分类</td>
   </tr>
   <tr>
+  <td>刑期预测</td>
     <td>MLMN</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-ptp">legal_ptp</a></td>
     <td>349</td>
@@ -299,7 +300,7 @@ $$
 
 </div>
 
-目前，我们的评测基准主要包含分类任务和文本生成任务两类。对于分类任务，我们采用F1值。对于文本生成任务，我们采用其Rouge1，Rouge2和RougeL的均值。特别地，对于法律NER任务，我们采用法律实体的提取准确率Accuracy作为其得分。
+目前，我们的评测基准主要包含分类任务，文本生成和命名实体识别任务三类。对于分类任务，我们采用F1值。对于文本生成任务，我们采用其Rouge1，Rouge2和RougeL的均值。特别地，对于法律NER任务，我们采用法律实体的提取准确率Accuracy作为其得分。
 
 🌟 模型得分
 
@@ -307,7 +308,7 @@ $$
 
 ### 评测代码
 
-我们将按照评测结构图中的13个基础任务持续评测现有大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/SCULAiW)。
+我们将按照评测结构图中的14个基础任务持续评测现有大模型在这些任务上的表现，详情可见[模型评测榜单](https://huggingface.co/spaces/daishen/SCULAiW)。
 
 #### 1.环境准备
 
@@ -385,12 +386,10 @@ eval_results/
 如果本项目对您的研究有所帮助，请引用本项目。
 
 ```
-@misc{LAiW,
-  title={LAiW},
-  author={Yongfu, Dai and Duanyu, Feng},
-  year={2023},
-  publisher={GitHub},
-  journal={GitHub repository},
-  howpublished={\url{https://github.com/Dai-shen/LAiW}},
+@article{dai2023laiw,
+  title={LAiW: A Chinese legal large language models benchmark (a technical report)},
+  author={Dai, Yongfu and Feng, Duanyu and Huang, Jimin and Jia, Haochen and Xie, Qianqian and Zhang, Yifang and Han, Weiguang and Tian, Wei and Wang, Hao},
+  journal={arXiv preprint arXiv:2310.05620},
+  year={2023}
 }
 ```
