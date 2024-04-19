@@ -1,4 +1,4 @@
-# ⚖️LAiW: A Chinese Legal Large Language Models Benchmark
+* # ⚖️LAiW: A Chinese Legal Large Language Models Benchmark
 
 | [English](https://github.com/Dai-shen/LAiW/blob/main/README_en.md) | [中文](https://github.com/Dai-shen/LAiW/blob/main/README.md)
 
@@ -22,20 +22,19 @@
 
 ## Contents
 
-- [⚖️LAiW: A Chinese Legal Large Language Models Benchmark](#️laiw-a-chinese-legal-large-language-models-benchmark)
-  - [News](#news)
-  - [Contents](#contents)
-    - [Evaluation structure diagram](#evaluation-structure-diagram)
-    - [Tasks](#tasks)
-    - [Datasets](#datasets)
-    - [Scoring Mechanism](#scoring-mechanism)
-    - [Evaluation](#evaluation)
-      - [Preparation](#preparation)
-      - [Automated Assessment](#automated-assessment)
-    - [Contributors](#contributors)
-    - [Disclaimer](#disclaimer)
-    - [Acknowledgements](#acknowledgements)
-    - [Cite](#cite)
+- [News](#news)
+- [Contents](#contents)
+  - [Evaluation structure diagram](#evaluation-structure-diagram)
+  - [Tasks](#tasks)
+  - [Datasets](#datasets)
+  - [Scoring Mechanism](#scoring-mechanism)
+  - [Evaluation](#evaluation)
+    - [Preparation](#preparation)
+    - [Automated Assessment](#automated-assessment)
+  - [Contributors](#contributors)
+  - [Disclaimer](#disclaimer)
+  - [Acknowledgements](#acknowledgements)
+  - [Cite](#cite)
 
 ### Evaluation structure diagram
 

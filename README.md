@@ -10,17 +10,13 @@
 
 ## 新闻
 
-📝 **即将更新**
-
-- 增加 [LAiW](https://github.com/Dai-shen/LAiW) 的人工评测方式及相关结果
-- 更新 [LAiW技术报告](https://arxiv.org/abs/2310.05620) 初版
-
 🔄 **最近更新**
 
-- [2024/1/22] 增加通用大模型 [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) 的评测结果
+- [2024-04-19] 更新 [LAiW技术报告](https://arxiv.org/abs/2310.05620)
 
 📅 **更早讯息**
 
+- [2024/1/22] 增加通用大模型 [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) 的评测结果
 - [2024/1/14] 提供评测数据集更多[详细信息](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)，同时给出模型评测指标 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的计算方式
 - [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
 - [2024/1/10] 新增商用大模型 GPT-4 和 通用大模型 Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
@@ -60,40 +56,40 @@
 
 按照大模型[评分机制](#评分机制)的计算方式，现阶段我们评测了7个主流法律大模型和6个通用大模型，模型得分如下
 
-| 模型 | 参数 | 模型<br>领域 | 总分 | 法律NLP<br>基础能力 | 法律基础<br>应用能力 | 法律复杂<br>应用能力 | 基模型 |
+| 模型 | 参数 | 模型领域 | 总分 | BIR | LFI | CLA | 基模型 |
 | :---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| GPT-4 | - | 通用 | 70.27 | 80.92 | 66.56 | 58.69 | - |
-| ChatGPT | - | 通用 | 63.88 | 75.99 | 55.31 | 57.96 | - |
-| [Baichuan2-Chat](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat) | 13B | 通用 | 45.87 | 53.67 | 30.54 | 58.40 | - |
-| [ChatGLM](https://huggingface.co/THUDM/chatglm-6b)   | 6B | 通用 | 44.17 | 51.51 | 33.26 | 52.44 | - |
-| [Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) | 13B | 通用 | 43.76 | 61.47 | 24.45 | 46.45 | Llama-13B |
-| [Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)  | 6B | 法律 | 37.49 | 39.68 | 24.96 | 54.71 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
-| [HanFei](https://github.com/siat-nlp/HanFei)   | 7B | 法律 | 33.36 | 37.42 | 18.80 | 53.31 | - |
-| [LexiLaw](https://github.com/CSHaitao/LexiLaw)   | 6B | 法律 | 29.71 | 41.32 | 9.67 | 43.73 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
-| [ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)  | 13B | 法律 | 27.02 | 58.02 | 8.18 | 6.74 | [Ziya-LLaMA-13B](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) |
-| [Llama2-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)    | 7B | 通用 | 26.63 | 31.86 | 14.20 | 38.64 | - |
-| [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)  | 13B | 法律 | 26.38 | 30.85 | 7.43 | 50.50 | [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
-| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 13B | 通用 | 23.97 | 21.02 | 20.43 | 34.80 | Llama-13B |
-| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 7B | 通用 | 23.62 | 22.32 | 18.61 | 37.16 | Llama-7B |
-| [Baichuan](https://github.com/baichuan-inc/Baichuan-7B) | 7B | 通用 | 22.33 | 21.20 | 18.33 | 30.86 | - |
-| [LaWGPT](https://github.com/pengxiao-song/LaWGPT)      | 7B | 法律 | 20.57 | 15.47 | 15.02 | 38.32 | [Chinese-LLaMA-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
-| Llama | 13B | 通用 | 19.32 | 18.51 | 13.84 | 29.40 | - |
-| [Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory) | 7B | 法律 | 17.25 | 12.66 | 12.17 | 33.37 | [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) |
-| Llama | 7B | 通用 | 15.19 | 11.12 | 14.86 | 22.54 | - |
+| GPT-4 | - | 通用 | 69.63 | 80.92 | 69.27 | 58.69 | - |
+| ChatGPT | - | 通用 | 64.09 | 75.99 | 58.32 | 57.96 | - |
+| [Baichuan2-Chat](https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat) | 13B | 通用 | 48.04 | 53.67 | 32.03 | 58.40 | - |
+| [ChatGLM](https://huggingface.co/THUDM/chatglm-6b)   | 6B | 通用 | 47.01 | 51.51 | 37.08 | 52.44 | - |
+| [Ziya-LLaMA](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) | 13B | 通用 | 45.79 | 61.47 | 29.44 | 46.45 | Llama-13B |
+| [Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)  | 6B | 法律 | 40.62 | 39.68 | 27.46 | 54.71 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
+| [HanFei](https://github.com/siat-nlp/HanFei)   | 7B | 法律 | 35.69 | 37.42 | 16.33 | 53.31 | - |
+| [LexiLaw](https://github.com/CSHaitao/LexiLaw)   | 6B | 法律 | 31.31 | 41.32 | 8.88 | 43.73 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) |
+| [ChatLaw](https://huggingface.co/JessyTsu1/ChatLaw-13B)  | 13B | 法律 | 25.77 | 58.02 | 12.54 | 6.74 | [Ziya-LLaMA-13B](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1) |
+| [Llama2-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)    | 7B | 通用 | 27.76 | 31.86 | 12.77 | 38.64 | - |
+| [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)  | 13B | 法律 | 29.25 | 30.85 | 6.39 | 50.50 | [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
+| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 13B | 通用 | 24.99 | 21.02 | 19.16 | 34.80 | Llama-13B |
+| [Chinese-LLaMA](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | 7B | 通用 | 24.91 | 22.32 | 18.25 | 34.16 | Llama-7B |
+| [Baichuan](https://github.com/baichuan-inc/Baichuan-7B) | 7B | 通用 | 22.51 | 21.20 | 15.46 | 30.86 | - |
+| [LaWGPT](https://github.com/pengxiao-song/LaWGPT)      | 7B | 法律 | 22.69 | 15.47 | 14.27 | 38.32 | [Chinese-LLaMA-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) |
+| Llama | 13B | 通用 | 21.00 | 18.51 | 15.08 | 29.40 | - |
+| [Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory) | 7B | 法律 | 18.83 | 12.66 | 10.45 | 33.37 | [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) |
+| Llama | 7B | 通用 | 16.35 | 11.12 | 15.40 | 22.54 | - |
 
 其中，大模型法律能力评测总得分和各层级法律能力得分排名依次为
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/overall-histogram.png"  width="100%" height="100%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/Overall-histogram.png"  width="100%" height="100%"></img>
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/NLP-histogram.png"  width="100%" height="100%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/BIR-histogram.png"  width="100%" height="100%"></img>
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/basic-histogram.png"  width="100%" height="100%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/LFI-histogram.png"  width="100%" height="100%"></img>
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/complex-histogram.png"  width="100%" height="100%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/CLA-histogram.png"  width="100%" height="100%"></img>
 
 ### 评测任务
 
-我们在 <strong>法学专家与人工智能专家</strong> 的共同努力下，从法学角度和可实现性上对法律 NLP的能力进行划分．如上图所示，目前我们将其分成了<strong>3</strong>大能力，共计<strong>13</strong>个基础任务：
+我们在 <strong>法学专家与人工智能专家</strong> 的共同努力下，从法学角度和可实现性上对法律 NLP的能力进行划分．如上图所示，目前我们将其分成了<strong>3</strong>大能力，共计<strong>14</strong>个基础任务：
 
 - 法律 NLP 基础能力：评测法律基础任务、 NLP 基础任务和法律信息抽取的能力，包括法条推送、要素识别、命名实体识别、司法要点摘要和案件识别 5 个基础任务
 - 法律基础应用能力：评测大模型对法律领域知识的基础应用能力，包括争议焦点挖掘、类案匹配、刑事裁判预测、民事裁判预测和法律问答 5 个基础任务
@@ -142,7 +138,7 @@
   </tr>
   <tr>
     <td>刑事裁判预测</td>
-    <td>根据事实描述自动预测裁判结果，本任务旨在根据案件事实、证据和适用的法律，对被告人的定罪与否以及可能的刑期进行预测</td>
+    <td>根据事实描述自动预测裁判结果，本任务旨在根据案件事实、证据和适用的法律，对被告人的定罪与否以及可能的刑期进行预测，因此分为罪名预测和刑期预测两类任务</td>
   </tr>
   <tr>
     <td>民事裁判预测</td>
@@ -223,7 +219,7 @@
   <tr>
     <td rowspan="6">法律知识理解能力</td>
     <td>争议焦点挖掘</td>
-    <td>Private</td>
+    <td>LAIC-2021</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-cfm">legal_cfm</a></td>
     <td>306</td>
     <td>分类</td>
@@ -303,7 +299,7 @@ $$
 
 </div>
 
-目前，我们的评测基准主要包含分类任务和文本生成任务两类。对于分类任务，我们采用F1值，对于文本生成任务，我们采用其Rouge1，Rouge2和RougeL的均值。特别地，对于法律NER任务，我们采用法律实体的提取准确率Accuracy作为其得分。
+目前，我们的评测基准主要包含分类任务和文本生成任务两类。对于分类任务，我们采用F1值。对于文本生成任务，我们采用其Rouge1，Rouge2和RougeL的均值。特别地，对于法律NER任务，我们采用法律实体的提取准确率Accuracy作为其得分。
 
 🌟 模型得分
 
