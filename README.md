@@ -1,6 +1,6 @@
 # ⚖️LAiW: A Chinese Legal Large Language Models Benchmark
 
-| [English](https://github.com/Dai-shen/LAiW/blob/main/README_en.md) | [中文](https://github.com/Dai-shen/LAiW/blob/main/README.md)
+| [English](https://github.com/Dai-shen/LAiW/blob/main/README_en.md) | [Chinese](https://github.com/Dai-shen/LAiW/blob/main/README.md)
 
 **LAiW：A Comprehensive Benchmark for Chinese Legal Large Language Models (LLMs)**
 
