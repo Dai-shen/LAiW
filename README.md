@@ -1,6 +1,6 @@
 # ⚖️LAiW: A Chinese Legal Large Language Models Benchmark
 
-| [English](https://github.com/Dai-shen/LAiW/blob/main/README_en.md) | [Chinese](https://github.com/Dai-shen/LAiW/blob/main/README.md)
+| [English](https://github.com/Dai-shen/LAiW/blob/main/README.md) | [Chinese](https://github.com/Dai-shen/LAiW/blob/main/README_zh.md)
 
 **LAiW：A Comprehensive Benchmark for Chinese Legal Large Language Models (LLMs)**
 
@@ -89,7 +89,7 @@ The overall scores and scores for each level of legal capability of LLMs are ran
 With the joint efforts of **legal experts** and **artificial intelligence experts**, we categorize the Legal Capabilities of LLMs into three levels, ranging from easy to difficult: Basic Information Retrieval (BIR), Legal Foundation Inference (**LFI**), and Cplex Legal Application (**CLA**), totaling 14 foundational tasks. The diagram above shows the structure of these three capability levels.
 
 - Basic Information Retrieval. The capability of LLMs aims to address some fundamental tasks in the field of law that can be directly transferred from NLP, as well as some simple yet crucial pre-tasks in the legal domain. It includes 5 foundational tasks: Legal Article Recommendation (AR), Element Recognition (ER), Named Entity Recognition (NER), Judicial Summarization (JS), and Case Recognition (CR).
-- Legal Foundation Inference. This capability aims to test some basic legal applications for LLMs. It includes 6 foundational tasks: Controversial Focus Mining (CFM), Similar Case Matching (SCM), Charge Prediction (CP), Prisom Term Prediction (PTP), Civil Trial Prediction (CTP), and Legal Question Answering (LQA).
+- Legal Foundation Inference. This capability aims to test some basic legal applications for LLMs. It includes 6 foundational tasks: Controversial Focus Mining (CFM), Similar Case Matching (SCM), Charge Prediction (CP), prison Term Prediction (PTP), Civil Trial Prediction (CTP), and Legal Question Answering (LQA).
 - Legal Foundation Inference. We consider the challenging tasks that LLMs may face, such as complex reasoning in the legal field and aligning with real legal logic. Here, we focus on three tasks: Judicial Reasoning Generation (JRG), Case Understanding (CU), and Legal Consultation (LC).
   
 Below is a brief description to each evaluation task.
@@ -135,7 +135,7 @@ Below is a brief description to each evaluation task.
   </tr>
   <tr>
     <td>Criminal Judgment Prediction</td>
-    <td>It involves predicting the guilt or innocence of the defendant, along with the potential sentencing, based on the results of basic legal NLP, including the facts of the case, the evidence presented, and the applicable law articles. Therefore, it is divided into two types of tasks: Charge Prediction and Prisom Term Prediction.</td>
+    <td>It involves predicting the guilt or innocence of the defendant, along with the potential sentencing, based on the results of basic legal NLP, including the facts of the case, the evidence presented, and the applicable law articles. Therefore, it is divided into two types of tasks: Charge Prediction and prison Term Prediction.</td>
   </tr>
   <tr>
     <td>Civil Trial Prediction</td>
@@ -236,7 +236,7 @@ We have reorganized and constructed the evaluation datasets for the aforemention
     <td>Classification</td>
   </tr>
   <tr>
-  <td>Prisom Term Prediction</td>
+  <td>prison Term Prediction</td>
     <td>MLMN</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-ptp">legal_ptp</a></td>
     <td>349</td>
