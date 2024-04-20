@@ -1,4 +1,4 @@
-### Original dataset
+### Original Dataset
 
 We have conducted research on existing publicly available legal datasets and compiled approximately 600k records. These primarily cover criminal and civil cases, and also include cases related to constitutional law, social law, economic law, and other legal areas.
 
