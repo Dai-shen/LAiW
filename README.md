@@ -6,7 +6,7 @@
 
 🔥 [LAiW Leaderboard](https://huggingface.co/spaces/daishen/SCULAiW)
 
-🔥 [Technical Report](https://arxiv.org/abs/2310.05620)
+🔥 [Technical Report and Official Paper](https://arxiv.org/abs/2310.05620)
 
 ## News
 
