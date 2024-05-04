@@ -164,7 +164,7 @@ Below is a brief description to each evaluation task.
 
 ### Datasets
 
-We have reorganized and constructed the evaluation datasets for the aforementioned tasks based on existing publicly available Chinese legal datasets. These datasets are collectively referred to as the **Legal Evaluation Dataset (LED)**. Subsequently, we will merge them with corresponding instruction fine-tuning datasets for LLMs and publish the unified Legal Instruction Tuning Dataset [Legal Instruction Tuning Dataset (LIT)](https://huggingface.co/datasets/daishen/LIT). Currently, we only present the evaluation datasets for each foundational task. For more detailed information about the datasets, please refer to [here](https://github.com/Dai-shen/LAiW/blob/main/data/README.md).
+We have reorganized and constructed the evaluation datasets for the aforementioned tasks based on existing publicly available Chinese legal datasets. These datasets are collectively referred to as the **Legal Evaluation Dataset (LED)**. We present the evaluation datasets for each foundational task. For more detailed information about the datasets, please refer to [here](https://github.com/Dai-shen/LAiW/blob/main/data/README.md).
 
 <table>
 
