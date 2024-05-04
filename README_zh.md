@@ -6,23 +6,23 @@
 
 🔥 [LAiW最新评测结果](https://huggingface.co/spaces/daishen/SCULAiW)
 
-🔥 [技术报告](https://arxiv.org/abs/2310.05620)
+🔥 [技术报告与正式文章](https://arxiv.org/abs/2310.05620)
 
 ## 新闻
 
 🔄 **最近更新**
 
-- [2024-04-19] 更新 [LAiW技术报告](https://arxiv.org/abs/2310.05620)
+- [2024-04-19] 更新 [正式文章](https://arxiv.org/abs/2310.05620)
 
 📅 **更早讯息**
 
 - [2024/1/22] 增加通用大模型 [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B) 的评测结果
-- [2024/1/14] 提供评测数据集更多[详细信息](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)，同时给出模型评测指标 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的计算方式
-- [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
+- [2024/1/14] 提供评测数据集更多[详细信息](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)，同时给出模型评测指标 [SCULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的计算方式
+- [2024/1/12] 进一步确认和完善相关评测结果，优化评测榜单 [SCULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 的布局，补充评测模型更多详细信息
 - [2024/1/10] 新增商用大模型 GPT-4 和 通用大模型 Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca) 的评测
 - [2024/1/2] 公布了大模型法律能力[评分机制](#评分机制)，公布大模型[评测分数](#模型得分)
 - [2024/1/2] 公布了14个基础任务的[测试数据集](https://huggingface.co/daishen)
-- [2024/1/1] 更新了 [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
+- [2024/1/1] 更新了 [SCULAiW](https://huggingface.co/spaces/daishen/SCULAiW) 法律能力评测结果
 - [2024/12/31] 完成了主流大模型的法律能力评测工作。评测过程中，除前述工作提及的模型外，新增通用大模型 [ChatGLM](https://huggingface.co/THUDM/chatglm-6b) 和法律大模型 [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file)，[Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0)，[Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory)，[LexiLaw](https://github.com/CSHaitao/LexiLaw)
 - [2023/10/12] 公布 [LAiW技术报告](https://arxiv.org/abs/2310.05620)初版
 - [2023/10/08] 公布 [LAiW](https://github.com/Dai-shen/LAiW) 第一阶段能力评测体系
@@ -167,7 +167,7 @@
 
 ### 评测数据集
 
-我们基于现有中文法律的公开数据集，重新整理并构建了上述各个任务的评测数据集 **Legal Evaluation Dataset (LED)** ，后续我们将和其对应的可用于大模型训练的指令微调数据集进行合并并统一发布法律指令微调数据集 [Legal Instruction Tuning Dataset (LIT)](https://huggingface.co/datasets/daishen/LIT)。目前，我们仅展示其各个基础任务评测的评测数据集。有关数据集更多详细信息请查看[这里](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)
+我们基于现有中文法律的公开数据集，重新整理并构建了上述各个任务的评测数据集 **Legal Evaluation Dataset (LED)** ，我们展示了其各个基础任务评测的评测数据集。有关数据集更多详细信息请查看[这里](https://github.com/Dai-shen/LAiW/blob/main/data/README.md)
 
 <table>
 
@@ -387,7 +387,7 @@ eval_results/
 
 ```
 @article{dai2023laiw,
-  title={LAiW: A Chinese legal large language models benchmark (a technical report)},
+  title={LAiW: A Chinese legal large language models benchmark},
   author={Dai, Yongfu and Feng, Duanyu and Huang, Jimin and Jia, Haochen and Xie, Qianqian and Zhang, Yifang and Han, Weiguang and Tian, Wei and Wang, Hao},
   journal={arXiv preprint arXiv:2310.05620},
   year={2023}
