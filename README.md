@@ -12,7 +12,7 @@
 
 🔄 **Recent Updates**
 
-- [2024-04-19] Update [Technical Report](https://arxiv.org/abs/2310.05620)
+- [2024-04-19] The official [paper](https://arxiv.org/abs/2310.05620) has been updated.
 
 📅 **Earlier News**
 
@@ -364,7 +364,7 @@ If this project has been helpful to your research, please consider citing our pr
 
 ```
 @article{dai2023laiw,
-  title={LAiW: A Chinese legal large language models benchmark (a technical report)},
+  title={LAiW: A Chinese legal large language models benchmark},
   author={Dai, Yongfu and Feng, Duanyu and Huang, Jimin and Jia, Haochen and Xie, Qianqian and Zhang, Yifang and Han, Weiguang and Tian, Wei and Wang, Hao},
   journal={arXiv preprint arXiv:2310.05620},
   year={2023}
