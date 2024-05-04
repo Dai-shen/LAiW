@@ -17,12 +17,12 @@
 📅 **Earlier News**
 
 - [2024/1/22] Added evaluation results for the general LLMs [Baichuan-7B](https://huggingface.co/baichuan-inc/Baichuan-7B).
-- [2024/1/14] Provided more detailed information on the evaluation dataset [here](https://github.com/Dai-shen/LAiW/blob/main/data/README.md), along with the calculation method for the model evaluation metric [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW).
-- [2024/1/12] Further confirmed and improved relevant evaluation results, optimized the layout of the evaluation leaderboard [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW), and supplemented more detailed information on evaluated models.
+- [2024/1/14] Provided more detailed information on the evaluation dataset [here](https://github.com/Dai-shen/LAiW/blob/main/data/README.md), along with the calculation method for the model evaluation metric [SCULAiW](https://huggingface.co/spaces/daishen/SCULAiW).
+- [2024/1/12] Further confirmed and improved relevant evaluation results, optimized the layout of the evaluation leaderboard [SCULAiW](https://huggingface.co/spaces/daishen/SCULAiW), and supplemented more detailed information on evaluated models.
 - [2024/1/10] Added evaluations for commercial LLMs GPT-4 and general LLMs Llama-7B, Llama13B, [Chinese-LLaMA-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca).
 - [2024/1/2] Announced the scoring mechanism for the legal capabilities of LLMs in [here](#评分机制) and published the evaluation scores for LLMs in [here](#模型得分).
 - [2024/1/2] Released test datasets for 14 foundational tasks [here](https://huggingface.co/daishen).
-- [2024/1/1] Updated the legal capability evaluation results for [SCIULAiW](https://huggingface.co/spaces/daishen/SCULAiW).
+- [2024/1/1] Updated the legal capability evaluation results for [SCULAiW](https://huggingface.co/spaces/daishen/SCULAiW).
 - [2024/12/31] Completed legal capability evaluations for mainstream LLMs. During the evaluation process, in addition to the models mentioned earlier, general LLMs [ChatGLM](https://huggingface.co/THUDM/chatglm-6b) and legal LLMs [Lawyer-LLaMA](https://github.com/AndrewZhe/lawyer-llama/tree/main?tab=readme-ov-file), [Fuzi-Mingcha](https://huggingface.co/SDUIRLab/fuzi-mingcha-v1_0), [Wisdom-Interrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory), [LexiLaw](https://github.com/CSHaitao/LexiLaw) were added.
 - [2023/10/12] Published the initial version of the [LAiW Technical Report](https://arxiv.org/abs/2310.05620).
 - [2023/10/08] Released the first phase evaluation system for LAiW capabilities [here](https://github.com/Dai-shen/LAiW).
