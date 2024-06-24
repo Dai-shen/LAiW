@@ -50,7 +50,7 @@
 
 ### 任务评测结构图
 
-<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framwork.png"  width="70%" height="70%"></img>
+<img src="https://github.com/Dai-shen/LAiW/blob/main/resources/task_framework.png"  width="70%" height="70%"></img>
 
 ### 模型得分
 
@@ -92,8 +92,8 @@
 我们在 <strong>法学专家与人工智能专家</strong> 的共同努力下，从法学角度和可实现性上对法律 NLP的能力进行划分．如上图所示，目前我们将其分成了<strong>3</strong>大能力，共计<strong>14</strong>个基础任务：
 
 - 基础信息检索能力：评测法律基础任务、 NLP 基础任务和法律信息抽取的能力，包括法条推送、要素识别、命名实体识别、司法要点摘要和案件识别 5 个基础任务
-- 法律基础推理能力：评测大模型对法律领域知识的基础应用能力，包括争议焦点挖掘、类案匹配、罪名预测、刑期预测和民事裁判预测和法律问答 6 个基础任务
-- 法律复杂应用能力：评测大模型对法律领域知识的复杂应用能力，包括司法说理生成、案情理解和法律咨询 3 个基础任务
+- 法律原则推理能力：评测大模型对法律领域知识的基础应用能力，包括争议焦点挖掘、类案匹配、罪名预测、刑期预测和民事裁判预测和法律问答 6 个基础任务
+- 法律高级应用能力：评测大模型对法律领域知识的复杂应用能力，包括司法说理生成、案情理解和法律咨询 3 个基础任务
   
 下面是各评测任务的简要介绍
 
@@ -128,7 +128,7 @@
   </tr>
 
   <tr>
-    <td rowspan="5">法律基础推理</td>
+    <td rowspan="5">法律原则推理</td>
     <td>争议焦点挖掘</td>
     <td>在法院的庭审过程中，裁判文书起着记录辩、诉双方观点证据的重要作用。本任务旨在抽取出裁判文书中辩方诉方之间的逻辑交互论点对，即争议焦点</td>
   </tr>
@@ -150,7 +150,7 @@
   </tr>
 
   <tr>
-    <td rowspan="3">法律复杂应用</td>
+    <td rowspan="3">法律高级应用</td>
     <td>司法说理生成</td>
     <td>人民法院在认定案件事实的基础上需要就判决理由作出进一步的阐述。本任务旨在根据案件事实描述生成相关的司法说理文本</td>
   </tr>
@@ -217,7 +217,7 @@
     <td>分类</td>
   </tr>
   <tr>
-    <td rowspan="6">法律基础推理</td>
+    <td rowspan="6">法律原则推理</td>
     <td>争议焦点挖掘</td>
     <td>LAIC-2021</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-cfm">legal_cfm</a></td>
@@ -261,7 +261,7 @@
   </tr>
 
   <tr>
-    <td rowspan="3">法律复杂应用</td>
+    <td rowspan="3">法律高级应用</td>
     <td>司法说理生成</td>
     <td>AC-NLG</td>
     <td><a href="https://huggingface.co/datasets/daishen/legal-jrg">legal_jrg</a></td>
